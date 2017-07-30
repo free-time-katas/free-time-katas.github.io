@@ -20,6 +20,19 @@ el que puede o no trabajar.
 
 Después de esta introducción pasemos a ver lo importante de hoy.
 
+> 1. [¿Qué es flexbox?](#qué-es-flexbox)
+> 1. [¿Para que sirve flexbox?](#para-que-sirve-flexbox)
+> 1. [¿Cómo usar flexbox?](#cómo-usar-flexbox)
+> 1. [Navegadores compatibles con flexbox](#navegadores-compatibles-con-flexbox)
+> 1. [Ejemplos con flexbox](#ejemplos-con-flexbox)
+> 1. [Términos de flexbox](#términos-de-flexbox)
+>     1. [Flex container](#flex-container)
+>     1. [Flex item](#flex-item)
+>     1. [Ejes](#ejes)
+>     1. [Direcciones](#direcciones)
+>     1. [Líneas](#líneas)
+>     1. [Dimensiones](#dimensiones)
+
 ## ¿Qué es flexbox?
 Flexbox o caja flexible es un modelo de caja que viene dentro del estándar css3. Viene a sustituir a los ya conocimos 
 como: block, inline, table, etc. Este modelo de caja ya es bidireccional y no solo de derecha a izquierda o de izquierda 
@@ -189,7 +202,7 @@ se muestra como las cajas se adaptan no solo en su ancho si no en su orden para 
 </html>
 ```
 
-## Terminos de flexbox
+## Términos de flexbox
 
 ![Esquema flexbox](/img/esquema-flexbox.jpg)
 
