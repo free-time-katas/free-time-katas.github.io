@@ -202,6 +202,12 @@ se muestra como las cajas se adaptan no solo en su ancho si no en su orden para 
 </html>
 ```
 
+**Ejemplo de una home entera**
+
+Si aun quieres ver más ejemplos te dejo uno de [flexbox con sass](https://github.com/free-time-katas/kata-flex-sass){:target="_blank"}
+
+![Ejemplo flexbox con sass](/img/ejemplo-flexbox-sass.png)
+
 ## Términos de flexbox
 
 ![Esquema flexbox](/img/esquema-flexbox.jpg)
