@@ -6,9 +6,8 @@ categories: flexbox
 permalink: /guia-flexbox.html
 excerpt: "Usar flexbox te asegura que los elementos siempre estarán como tu quieres en todas las situaciones, por eso te traigo esta guia en español."
 img: guia-flexbox.jpg
+author: "David Díaz"
 ---
-![Guía flexbox](/img/guia-flexbox.jpg)
-
 La tecnología avanza muy rápido y como desarrolladores necesitamos adaptarnos a los nuevos tiempo e intentar conocer 
 todas las novedades.
 
