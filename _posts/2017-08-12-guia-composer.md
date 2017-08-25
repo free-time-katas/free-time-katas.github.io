@@ -8,8 +8,8 @@ excerpt: "Si estas buscando una guía de composer... en este artículo te explic
 img: guia-composer.jpeg
 author: "David Díaz"
 ---
-En el año 2017 no concibo ningún proyecto sin un gestor de dependencias, da igual la tecnología que uses. Para Java
-tenemos **Maven**, para android **Gradle**, para js **NPM**, para php **Composer**, etc.
+En el año 2017 no concibo ningún proyecto sin un **gestor de dependencias**, da igual la tecnología que uses. Para Java
+tenemos Maven, para android Gradle, para js NPM, para php Composer, etc.
 
 Un gestor de dependencias te da la facilidad de poder descargar paquetes a tus proyectos y el solo va controlando las
 versiones de los mismos. Ya se queda muy atrás eso de descargar un zip e introducir mil ficheros dentro de nuestros
@@ -19,7 +19,7 @@ Otras de las ventajas es el trabajo en el equipo, todos trabajan con la misma ve
 tener nuestros proyectos. Nos olvidamos de que cada miembro del equipo trabaje con versiones distintas de un mismo
 paquete.
 
-Dicho todo esto vamos a ver lo fácil que es trabajar con **composer** en **php**.
+Dicho todo esto vamos a ver lo fácil que es trabajar con composer en php.
 
 > 1. [¿Qué es composer?](#qué-es-composer)
 > 1. [¿Cómo instalar composer?](#cómo-instalar-composer)
@@ -33,7 +33,7 @@ Dicho todo esto vamos a ver lo fácil que es trabajar con **composer** en **php*
 >       1. [Descargar repositorios privados](#descargar-repositorios-privados)
 
 ## ¿Qué es composer?
-Como he dicho antes **composer** es un gestor de dependencias para **php**. Con el podemos descargar desde librerías
+Como he dicho antes composer es un gestor de dependencias para php. Con el podemos descargar desde librerías
 que alguien de la comunidad ha hecho y nos vienen fenomenal, hasta instalar framework enteros como es el caso de yii, 
 laravel, doctrine, symfony, etc. Lo bueno es que hacer esto se tarda minutos en hacer y es automático.
 
@@ -50,7 +50,7 @@ php -r "unlink('composer-setup.php');"
 
 Es generará un **composer.phar** en el directorio que estemos. No esta nada mal que cada proyecto tenga su **composer.phar**
 pero, yo prefiero instalarlo globalmente en mi máquina.
-Para tenerlo de forma global en **mac** lo que hago es sustituir la tercera línea del comando anterior añadiendole
+Para tenerlo de forma global en mac lo que hago es sustituir la tercera línea del comando anterior añadiendole
 algunos parámetros.
 
 ```
@@ -77,7 +77,7 @@ Y ya puedo ver si la instalación se ha realizado correctamente.
 ## ¿Cómo usar composer?
 Si el proyecto es nuevo tenemos dos opciones:
 1. Crear el fichero de configuración a mano.
-1. Ejecutar **composer init**
+1. Ejecutar "composer init"
 
 Aquí vamos usar la ley del mínimo esfuerzo y estando en el directorio donde va a estar nuestro proyecto, vamos a ejecutar:
 
@@ -91,7 +91,7 @@ Lo primero que nos pregutanrá es el nombre del paquete:
 Package name (<vendor>/<name>) [daviddiaz/test]: diazdavid-info/test
 ```
 
-Yo suelo poner mi **nombre de usuario de github/nombre del proyecto**
+Yo suelo poner mi (nombre de usuario de github/nombre del proyecto)
 
 Después nos pide una descripción del proyecto:
 
@@ -101,7 +101,7 @@ Description []: Proyecto de prueba
 
 Si no tenemos muy claro la descripción podemos dejarlo en blanco y después rellenarlo.
 
-Lo siguiente es un dato importante y es el **autor de proyecto**:
+Lo siguiente es un dato importante y es el autor de proyecto:
 
 ```
 Author [David Díaz <diazdavid.info@gmail.com>, n to skip]: David Diaz <diazdavid.info@gmail.com>
@@ -116,9 +116,9 @@ Yo es este caso prefiero que todas las dependencias de mis proyecto sean estable
 Minimum Stability []: stable 
 ``` 
 
-Las opciones posibles son: **dev, alpha, beta, RC y stable**.
+Las opciones posibles son: dev, alpha, beta, RC y stable.
 
-La siguiente pregunta es el tipo de proyecto estamos creando. Normalmente yo pongo **project**:
+La siguiente pregunta es el tipo de proyecto estamos creando. Normalmente yo pongo project:
 
 ```
 Package Type (e.g. library, project, metapackage, composer-plugin) []: project
@@ -130,9 +130,9 @@ Lo siguiente es el tipo de licencia y esto ya es un mundo. Normalmente yo lo dej
 License []:
 ```
 
-Ahora viene una parte importante que es indicarle a **composer** cuales van a ser nuestras dependencias. Normalmente
+Ahora viene una parte importante que es indicarle a composer cuales van a ser nuestras dependencias. Normalmente
 yo no las instalo por el asistente a nos ser que ya sepa cuales van a ser mis dependencias.
-Vamos a suponer que queremos **Doctrine**:
+Vamos a suponer que queremos Doctrine:
 
 ```
 Would you like to define your dependencies (require) interactively [yes]? yes
@@ -144,8 +144,8 @@ Enter the version constraint to require (or leave blank to use the latest versio
 Using version ^2.5 for doctrine/orm
 ```
 
-Esto descarga la última versión de doctrine. Da la casualidad que yo me sabía el nombre completo de **Doctrine** pero 
-podíamos haber buscado solo poniendo **Doctrine** y nos mostraría:
+Esto descarga la última versión de doctrine. Da la casualidad que yo me sabía el nombre completo de Doctrine pero 
+podíamos haber buscado solo poniendo Doctrine y nos mostraría:
 
 ```
 Found 15 packages matching Doctrine
@@ -169,11 +169,11 @@ Found 15 packages matching Doctrine
 Enter package # to add, or the complete package name if it is not listed:
 ```
 
-Pero en el caso de **doctrine** no esta en paquete que queremos. Más adelante os mostraré una forma más sencilla de
+Pero en el caso de doctrine no esta en paquete que queremos. Más adelante os mostraré una forma más sencilla de
 buscar paquetes.
 
 Después nos pregunta las dependencias que queremos pero para desarrollo. Casi siempre usamos paquetes para desarrollo
-como puede ser **phpUnit** y paquetes para producción como puede ser **Doctrine**. Por este motivo **Composer** lo
+como puede ser phpUnit y paquetes para producción como puede ser Doctrine. Por este motivo Composer lo
 divide en dos.
 En esta ocasión yo le digo que no y más adelante decidiré:
 
@@ -203,7 +203,7 @@ Ya hemos llegado al final y nos pide confirmación:
 Do you confirm generation [yes]? yes
 ```
 
-Esto generará un fichero **composer.json** que veremos más adelante para que sirve.
+Esto generará un fichero composer.json que veremos más adelante para que sirve.
 
 Solo nos queda ejecutar:
 
@@ -211,13 +211,13 @@ Solo nos queda ejecutar:
 composer update
 ```
 
-Este comando descarga todas las dependencias dentro de un directorio que se llama **vendor**.
+Este comando descarga todas las dependencias dentro de un directorio que se llama vendor.
 
 ## ¿Cómo añadir paquetes a composer?
 Como hemos visto en el punto anterior podemos instalar paquetes con la ayuda del asistente pero ¿que pasa cuando
 necesitamos más paquetes?
 La respuesta es muy fácil, nos vamos a [packagist.org](https://packagist.org/){:target="_blank"} que es una web muy famosa y 
-que recoge muchos paquetes de **composer**.
+que recoge muchos paquetes de composer.
 En ella buscamos lo que queremos y nos quedamos con el nombre del paquete. Ahora nos vamos a la consola y ejecutamos:
 
 ```
@@ -266,34 +266,34 @@ Las demás partes son configuraciones propias del proyecto.
 
 ## ¿Para que sirve el composer.lock?
 Este fichero lo que almacena es la versión exacta de las dependencias que estamos usando. Esto hace que cuando subimos
-el código a producción o otro compañero se lo descarga, **composer** descarga la versión que le indique este fichero.
-Hay que tener cuidado porque solo se descarga la versión indicada por este fichero si ejecutamos **composer intall**
-si por el contrario ejecutamos **composer update**, **composer** omitirá este fichero y descarga la última versión 
+el código a producción o otro compañero se lo descarga, composer descarga la versión que le indique este fichero.
+Hay que tener cuidado porque solo se descarga la versión indicada por este fichero si ejecutamos composer intall
+si por el contrario ejecutamos composer update, composer omitirá este fichero y descarga la última versión 
 de todas nuestras dependencias.
 
 ## ¿Cómo actualizar composer?
-En ocasiones necesitamos actualizar **composer** de versión, para ello ejecutamos:
+En ocasiones necesitamos actualizar composer de versión, para ello ejecutamos:
 
 ```
 composer self update
 ```
 
-Este comando actualizará la versión de **composer**
+Este comando actualizará la versión de composer
 
 ## Preguntas comunes de composer
 
 ### Diferencia entre composer install y composer update
 **Composer install** descarga todas las dependencias pero, teniendo en cuenta la versión que ha sido almacenado en el fichero
-**composer.lock**
+composer.lock
 **Composer update** descarga todas las dependencias con la última versión disponible.
 
 ### Descargar repositorios privados
 En alguna ocasión podemos querer descargar alguna dependencia de algún repositorio privado y para ello tenemos que editar
-el fichero **composer.json** y añadir:
+el fichero composer.json y añadir:
 1. Url del repositorio privado.
 1. Paquete que queremos descargas con su versión
 
-Un ejemplo de **composer.json** con repositorio privado es el siguiente:
+Un ejemplo de composer.json con repositorio privado es el siguiente:
 
 ```
 {
@@ -319,4 +319,4 @@ Un ejemplo de **composer.json** con repositorio privado es el siguiente:
 }
 ```
 
-Y con esto ya podemos ejecutar **composer update** y comprobar si todo esta correcto.
+Y con esto ya podemos ejecutar "composer update" y comprobar si todo esta correcto.
