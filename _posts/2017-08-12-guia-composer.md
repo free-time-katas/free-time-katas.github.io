@@ -118,7 +118,7 @@ Minimum Stability []: stable
 
 Las opciones posibles son: **dev, alpha, beta, RC y stable**.
 
-La siguiente pregunta es el tipo de proyecto estamos creando. Normalmente yo pongo **proyect**:
+La siguiente pregunta es el tipo de proyecto estamos creando. Normalmente yo pongo **project**:
 
 ```
 Package Type (e.g. library, project, metapackage, composer-plugin) []: project
@@ -187,7 +187,7 @@ Ya hemos llegado al final y nos pide confirmación:
 {
     "name": "diazdavid-info/test",
     "description": "Proyecto de prueba",
-    "type": "proyect",
+    "type": "project",
     "require": {
         "doctrine/orm": "^2.5"
     },
@@ -241,7 +241,7 @@ Este fichero contiene toda la configuración de nuestras dependencias, un ejempl
 {
     "name": "diazdavid-info/test",
     "description": "Proyecto de prueba",
-    "type": "proyect",
+    "type": "project",
     "authors": [
         {
             "name": "David Diaz",
@@ -299,7 +299,7 @@ Un ejemplo de **composer.json** con repositorio privado es el siguiente:
 {
     "name": "diazdavid-info/test",
     "description": "Proyecto de prueba",
-    "type": "proyect",
+    "type": "project",
     "authors": [
         {
             "name": "David Diaz",
