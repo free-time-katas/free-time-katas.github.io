@@ -8,8 +8,8 @@ excerpt: "Usar flexbox te asegura que los elementos siempre estarán como tu qui
 img: guia-flexbox.jpg
 author: "David Díaz"
 ---
-La tecnología avanza muy rápido y como desarrolladores necesitamos adaptarnos a los nuevos tiempo e intentar conocer 
-todas las novedades.
+Hoy os trigo una guia de flexbox, una de las últimas novedades css3. La tecnología avanza muy rápido y como 
+desarrolladores necesitamos adaptarnos a los nuevos tiempo e intentar conocer las últimas tecnologías.
 
 Auque css no es un lenguaje de programación si que es una pieza muy importante en el desarrollo de una página web. Los 
 desarrolladores front-end cada día necesitan más potencia para explotar toda su creatividad.
