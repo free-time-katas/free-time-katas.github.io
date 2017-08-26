@@ -161,10 +161,10 @@ una muy buena decisión ya que cada desarrollador se siente cómodo con unos ico
 Os dejo unos libros de bootstrap por si queréis aprender un poco más.
 
 ### Bootstrap 4 Cookbook (Inglés)
-[![Bootstrap 4 Cookbook](/img/bootstrap-4-cookbook.jpg)](https://www.amazon.es/Bootstrap-Cookbook-Snigdhendu-Bikas-Bhaumik/dp/178588929X/){:target="_blank"}
+[![Bootstrap 4 Cookbook](/img/bootstrap-4-cookbook.jpg)](https://www.amazon.es/Bootstrap-Cookbook-Snigdhendu-Bikas-Bhaumik/dp/178588929X/){:target="_blank"}{:class="affiliation"}
 
 ### Learning Bootstrap 4 Second Edition (Inglés)
-[![Learning Bootstrap 4 Second Edition](/img/learning-bootstrap-4-second-edition.jpg)](https://www.amazon.es/Learning-Bootstrap-Second-Matt-Lambert/dp/1785881000/){:target="_blank"}
+[![Learning Bootstrap 4 Second Edition](/img/learning-bootstrap-4-second-edition.jpg)](https://www.amazon.es/Learning-Bootstrap-Second-Matt-Lambert/dp/1785881000/){:target="_blank"}{:class="affiliation"}
 
 ### Web Development with Bootstrap 4 and Angular 2, Second Edition (Inglés)
-[![Web Development with Bootstrap 4 and Angular 2, Second Edition](/img/web-development-with-bootstrap-4-and-angular-2.jpg)](https://www.amazon.es/Web-Development-Bootstrap-Angular-Second/dp/1785880810/){:target="_blank"}
+[![Web Development with Bootstrap 4 and Angular 2, Second Edition](/img/web-development-with-bootstrap-4-and-angular-2.jpg)](https://www.amazon.es/Web-Development-Bootstrap-Angular-Second/dp/1785880810/){:target="_blank"}{:class="affiliation"}
