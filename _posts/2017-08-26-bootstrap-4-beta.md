@@ -40,7 +40,7 @@ sass. Es una buena decisión ya que la comunidad de desarrolladores que hay es m
 Uno de los cambios, a mi parecer, más importantes es el cambio del grid o de su sistema de rejilla. Ahora la nueva versión
 de boostrap va a usar flexbox.
 
-> Si quieres saber más sobre flexbox pasate por la [guia flebox](guia-flexbox.html) donde explico su potencia.
+> Si quieres saber más sobre flexbox pasate por la [guia flexbox](guia-flexbox.html) donde explico su potencia.
 
 Este nuevo sistema de grib es mucho más fácil de implementar:
 
