@@ -8,9 +8,9 @@ excerpt: "¿Como implementarlo en nuestra web? ¿Qué tipos hay? ¿Lo puedo pone
 img: rich-snippet.jpg
 author: "David Díaz"
 ---
-Cada día buscamos ser más que nuestro resultado en las SERP sea en más destacado y aumente el CRT. Ahora tenemos la 
-posibilidad de añadir los Rich Snippet (Fragmentos Enrriquecidos) para que nuestro resultado en Google sea más visible.
-Tengo que advertir que no por tener los Rich Snippet en nuetra web Google los va a sar en sus resultados. A día de hoy 
+Cada día buscamos más que nuestros resultados en las SERP sea los más destacados y aumente el CRT. Ahora tenemos la 
+posibilidad de añadir **los Rich Snippet (Fragmentos Enriquecidos)** para que nuestros resultados en Google sea más visibles.
+Tengo que advertir que no por tener los Rich Snippet en nuetra web Google los va a usar en sus resultados. A día de hoy 
 la decisión de interpretarlos y mostrarlos en los resultados de búsqueda es de Google pero, hay que decir que es interesante
 ponerlos y esperar con ilusión que los saque.
 
@@ -31,7 +31,7 @@ buscadores. Esto hace que los buscadores modifiquen los resultados y los muestre
 tipo de Rich Snippet.
 
 ### Ejemplo de resultado con Rich Snippet
-Aquí tenéis un ejemplo de un resultado con fragmentos enrriquecidos
+Aquí tenéis un ejemplo de un resultado con fragmentos enriquecidos
 
 ![Ejemplo con rich snippet](/img/ejemplo-con-rich-snippet.jpg)
 
@@ -49,7 +49,7 @@ herramienta online que nos facilite la creación.
 Os voy aconsejar algunas herramientas online para crear Rich Snippet:
 1. [https://hallanalysis.com/json-ld-generator/](https://hallanalysis.com/json-ld-generator/){:target="_blank"}
 ![hallanalysis generador rich snippet](/img/hallanalysis-generador-rich-snippet.jpg)
-Esta web nos permite selecionar varios tipos y nos genera un código para que lo pegemos en nuestra web
+Esta web nos permite seleccionar varios tipos y nos genera un código para que lo pegamos en nuestra web
 1. [http://tools.ranksider.com/rich-snippets/product](http://tools.ranksider.com/rich-snippets/product){:target="_blank"}
 ![ranksider generador rich snippet](/img/ranksider-generador-rich-snippet.jpg)
 Otra web muy parecida a la anterior donde nos da un formulario muy cómodo y tenemos que completarlo.
@@ -119,11 +119,11 @@ Cualquiera de los dos formatos es totalmente válido y ya va por gustos para qui
 
 ## ¿Como validar los Rich Snippets?
 Esto es una parte muy importante para que Google no nos reporte un error en los Rich Snippet.
-Os voy a aconsejar várias herramientas online para poder validar vuestros códigos.
+Os voy a aconsejar varias herramientas online para poder validar vuestros códigos.
 
 1. [https://search.google.com/structured-data/testing-tool?hl=es](https://search.google.com/structured-data/testing-tool?hl=es){:target="_blank"}
 ![google validador rich snippet](/img/google-validador-rich-snippet.jpg)
-El propio google tiene su propia herramienta para la validación de los fragmentos enrriquecidos asi que... usemola.
+El propio google tiene su propia herramienta para la validación de los fragmentos enriquecidos así que... usémosla.
 1. [https://webmaster.yandex.com/tools/microtest/](https://webmaster.yandex.com/tools/microtest/){:target="_blank"}
 ![yandex validador rich snippet](/img/yandex-validador-rich-snippet.jpg)
 Aquí tenéis otra herramienta de validación muy buena por si la de google falla.
