@@ -27,8 +27,8 @@ Aquí tenéis el índice:
 
 ## ¿Qué son los Rich Snippets o Fragmentos Enriquecidos?
 Son fragmentos de código que añadimos en nuestras webs y facilita tanto la lectura como la compresión a las arañas de los
-buscadores. Esto hace que los buscadores modifiquen los resultados y los muestre de una forma diferente en función del 
-tipo de Rich Snippet.
+buscadores. Esto hace que los buscadores modifiquen los resultados y los muestre de una forma diferente **en función del 
+tipo de Rich Snippet.**
 
 ### Ejemplo de resultado con Rich Snippet
 Aquí tenéis un ejemplo de un resultado con fragmentos enriquecidos
