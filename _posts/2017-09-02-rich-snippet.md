@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Los Rich Snippet. Marca la diferencia en Google."
-date: 2017-09-02 07:27:47 +0200
+date: 2017-09-03 07:27:46 +0200
 categories: rich snippet
 permalink: /rich-snippet/
 excerpt: "¿Como implementarlo en nuestra web? ¿Qué tipos hay? ¿Lo puedo poner en wordpress? Estas preguntas y muchas más las tienes aquí."
