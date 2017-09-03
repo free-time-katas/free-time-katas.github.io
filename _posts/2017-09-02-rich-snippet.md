@@ -18,12 +18,17 @@ Dicho esto, en este artículo explicaremos como podemos implementarlos en nuestr
 
 Aquí tenéis el índice:
 
+> 1. [Tipos de Rich Snippets](#tipos-de-rich-snippets)
 > 1. [¿Qué son los Rich Snippets o Fragmentos Enriquecidos?](#qué-son-los-rich-snippets-o-fragmentos-enriquecidos)
 >       1. [Ejemplo de resultado con Rich Snippet](#ejemplo-de-resultado-con-rich-snippet)
 >       1. [Ejemplo de resultado sin Rich Snippet](#ejemplo-de-resultado-sin-rich-snippet)
 > 1. [¿Comó crear los Rich Snippets?](#comó-crear-los-rich-snippets)
 > 1. [¿Donde colocar los Rich Snippets?](#donde-colocar-los-rich-snippets)
 > 1. [¿Como validar los Rich Snippets?](#como-validar-los-rich-snippets)
+
+## Tipos de Rich Snippets
+
+{% include rich-snippet.html %}
 
 ## ¿Qué son los Rich Snippets o Fragmentos Enriquecidos?
 Son fragmentos de código que añadimos en nuestras webs y facilita tanto la lectura como la compresión a las arañas de los

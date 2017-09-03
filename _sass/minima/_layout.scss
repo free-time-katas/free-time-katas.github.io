@@ -260,3 +260,22 @@
 .PageNavigation .next {
   text-align: right;
 }
+
+.list-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  .section {
+    a {
+      text-decoration: none;
+      color: black;
+      h3 {
+        font-size: 24px;
+      }
+    }
+    flex: 0 1 32%;
+    @include media-query($on-palm) {
+      flex: 0 1 100%;
+    }
+  }
+}
