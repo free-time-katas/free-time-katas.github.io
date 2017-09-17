@@ -2,11 +2,14 @@
 layout: post
 title:  "Bootstrap 4 beta, os contamos sus novedades"
 date:   2017-08-26 07:27:47 +0200
-categories: bootstrap
+categories: 
+    - bootstrap
+    - frontend
 permalink: /bootstrap-4-beta.html
 excerpt: "Si, has leído bien, después de dos años ya esta aquí la versión beta de la última versión de bootstrap. Así que vamos a jugar con ella."
 img: novedades-bootstrap-4-beta.jpg
 author: "David Díaz"
+post_in_home: true
 ---
 El equipo de unos de los framework css más usado lleva dos años trabajando en su nueva versión y por fin ya tenemos su
 versión beta.

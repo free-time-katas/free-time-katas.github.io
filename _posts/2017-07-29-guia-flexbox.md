@@ -2,11 +2,14 @@
 layout: post
 title:  "Guía de flexbox css en español"
 date:   2017-07-29 07:27:47 +0200
-categories: flexbox
+categories: 
+    - flexbox
+    - frontend
 permalink: /guia-flexbox.html
 excerpt: "Usar flexbox te asegura que los elementos siempre estarán como tu quieres en todas las situaciones, por eso te traigo esta guia en español."
 img: guia-flexbox.jpg
 author: "David Díaz"
+post_in_home: true
 ---
 Hoy os trigo una guia de flexbox, una de las últimas novedades css3. La tecnología avanza muy rápido y como 
 desarrolladores necesitamos adaptarnos a los nuevos tiempo e intentar conocer las últimas tecnologías.

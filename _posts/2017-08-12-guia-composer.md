@@ -2,11 +2,14 @@
 layout: post
 title:  "Guía de composer en español"
 date:   2017-08-12 07:27:47 +0200
-categories: composer
+categories: 
+    - composer
+    - backend
 permalink: /guia-composer.html
 excerpt: "Si estas buscando una guía de composer... en este artículo te explicamos todo lo que necesitas para empezar a integrarlo en tus proyectos."
 img: guia-composer.jpeg
 author: "David Díaz"
+post_in_home: true
 ---
 En el año 2017 no concibo ningún proyecto sin un **gestor de dependencias**, da igual la tecnología que uses. Para Java
 tenemos Maven, para android Gradle, para js NPM, para php Composer, etc.

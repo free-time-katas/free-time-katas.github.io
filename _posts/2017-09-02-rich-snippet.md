@@ -2,11 +2,14 @@
 layout: post
 title: "Los Rich Snippet. Marca la diferencia en Google."
 date: 2017-09-03 07:27:46 +0200
-categories: rich snippet
+categories: 
+    - rich snippet
+    - frontend
 permalink: /rich-snippet/
 excerpt: "¿Como implementarlo en nuestra web? ¿Qué tipos hay? ¿Lo puedo poner en wordpress? Estas preguntas y muchas más las tienes aquí."
 img: rich-snippet.jpg
 author: "David Díaz"
+post_in_home: true
 ---
 Cada día buscamos más que nuestros resultados en las SERP sea los más destacados y aumente el CRT. Ahora tenemos la 
 posibilidad de añadir **los Rich Snippet (Fragmentos Enriquecidos)** para que nuestros resultados en Google sea más visibles.
