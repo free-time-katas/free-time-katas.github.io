@@ -11,7 +11,7 @@ layout: default
         {% for post in site.posts %}
         <li>
             <h2>
-                <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+                <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | raw }}</a>
             </h2>
             <a class="post-link" href="{{ post.url | relative_url }}">
                 <img src="{{ site.url }}/img/{{ post.img }}" alt="{{ post.title | escape }}">
