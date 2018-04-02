@@ -1,38 +1,41 @@
 ---
-layout: post
-title:  "Bootstrap 4 beta, os contamos sus novedades"
-date:   2017-08-26 07:27:47 +0200
+layout: page
+title: "▷ Bootstrap 4 beta, os contamos sus novedades"
+description: "Descubre todas las novedades de la beta de ➤ ➤ Bootstrap 4. Si estas pensando añadir un framework css a tus proyectos ENTRA y echa un vistazo a las novedades que trae Bootstrap."
+principal-title: "Bootstrap 4 beta, os contamos sus novedades"
+principal-image: "/img/novedades-bootstrap-4-beta.jpg"
+images-list:
+    - /img/grid-1-bootstrap-4.jpg
+    - /img/grid-2-bootstrap-4.jpg
+    - /img/tarjetas-bootstrap-4.jpg
+    - /img/botones-bootstrap-4.jpg
+    - /img/carrusel-bootstrap-4.jpg
+    - /img/popover-bootstrap-4.jpg
+    - /img/iconos-bootstrap-4.jpg
+    - /img/bootstrap-4-cookbook.jpg
+    - /img/learning-bootstrap-4-second-edition.jpg
+    - /img/web-development-with-bootstrap-4-and-angular-2.jpg
+date: 2017-08-26 07:27:47 +0200
 categories: 
     - bootstrap
     - frontend
+    - css
 permalink: /bootstrap-4-beta.html
 excerpt: "Si, has leído bien, después de dos años ya esta aquí la versión beta de la última versión de bootstrap. Así que vamos a jugar con ella."
-img: novedades-bootstrap-4-beta.jpg
 author: "David Díaz"
-post_in_home: true
+enable-related: false
+enable-principal-title: true
+enable-principal-image: false
+enable-index: true
 ---
-El equipo de unos de los framework css más usado lleva dos años trabajando en su nueva versión y por fin ya tenemos su
+*El equipo de Bootstrap lleva dos años trabajando en su nueva versión* y por fin ya tenemos su
 versión beta.
 
-En su página web nos cuentan un poco como ha ido en desarrollo en números, han escrito 67.000 nuevas líneas, ha borrado
-82.000 líneas, han realizado 5.000 commit y han cambiado más de 650 ficheros. Estos números nos indica que básicamente 
+En su página web nos cuentan un poco como ha ido en desarrollo en números, *han escrito 67.000 nuevas líneas, ha borrado
+82.000 líneas, han realizado 5.000 commit y han cambiado más de 650 ficheros.* Estos números nos indica que básicamente 
 han reescrito en framework entero.
 
 Dicho esto... vamos a probar esta versión beta de bootstrap 4 y veamos que cosas nuevas trae.
-
-> 1. [Novedades bootstrap 4](#novedades-bootstrap-4)
->       1. [Cambio en el preprocesador de css](#cambio-en-el-preprocesador-de-css)
->       1. [Nuevo sistema de grid](#nuevo-sistema-de-grid)
->       1. [Nuevas tarjetas tipo material design](#nuevas-tarjetas-tipo-material-design)
->       1. [Reset de normalize css](#reset-de-normalize-css)
->       1. [Nuevos diseños](#nuevos-diseños)
->       1. [Componentes javascript](#componentes-javascript)
->       1. [Colocación automática de tooltips, popovers y dropdowns](#colocación-automática-de-tooltips-popovers-y-dropdowns)
->       1. [Adios a los iconos](#adios-a-los-iconos)
-> 1. [Libros bootstrap 4](#libros-bootstrap-4)
->       1. [Bootstrap 4 Cookbook (Inglés)](#bootstrap-4-cookbook-inglés)
->       1. [Learning Bootstrap 4 Second Edition (Inglés)](#learning-bootstrap-4-second-edition-inglés)
->       1. [Web Development with Bootstrap 4 and Angular 2, Second Edition (Inglés)](#web-development-with-bootstrap-4-and-angular-2-second-edition-inglés)
 
 ## Novedades bootstrap 4
 ### Cambio en el preprocesador de css
@@ -71,7 +74,7 @@ Este nuevo sistema de grib es mucho más fácil de implementar:
 </div>
 ```
 
-![Ejemplo 1 grid bootstrap 4](/img/grid-1-bootstrap-4.jpg)
+![Ejemplo 1 grid bootstrap 4](/img/grid-1-bootstrap-4.jpg)//
 
 Ahora solo le indicamos que queremos una nueva columna y el automáticamente redimensiona las columnas automáticamente
 sin tenerle que especificar los diferentes tamaños.
@@ -105,13 +108,13 @@ Podemos seguir forzando que una columna ocupe más que otras:
 </div>
 ```
 
-![Ejemplo 2 grid bootstrap 4](/img/grid-2-bootstrap-4.jpg)
+![Ejemplo 2 grid bootstrap 4](/img/grid-2-bootstrap-4.jpg)//
 
 ### Nuevas tarjetas tipo material design
 Esto es una de las cosas más chulas porque en versiones anteriores de bootstrap no existía. Este cambio permite hacer
 cosas como estas:
 
-![Tarjetas bootstrap 4](/img/tarjetas-bootstrap-4.jpg)
+![Tarjetas bootstrap 4](/img/tarjetas-bootstrap-4.jpg)//
 
 Con tan solo estas líneas de código:
 
