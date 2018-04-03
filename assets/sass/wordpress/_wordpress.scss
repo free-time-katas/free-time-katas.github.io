@@ -1,0 +1,22 @@
+@import 'core';
+@import 'singular';
+@import 'widgets';
+@import 'comments';
+@import 'gallery';
+@import 'contactform';
+
+.no-sidebar .has-background-dim, .no-sidebar .alignfull{
+	
+ margin-bottom: 3rem;
+  text-align: center;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+.no-sidebar .alignfull img{
+	width: 100%;
+}
