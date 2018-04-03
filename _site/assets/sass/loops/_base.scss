@@ -1,0 +1,103 @@
+.entry-item{
+	padding: 1rem;
+	width: 100%;
+	flex-basis: 100%;
+	max-width: 100%;
+
+
+	
+	.entry-title {
+		margin-top: 0;
+		margin-bottom: 0.25rem;
+		font-size: 1.25rem;
+
+		a{
+			text-decoration: none;
+			display: block;
+		}
+	}
+
+	p {
+		margin-bottom: 0;
+		font-size: 1rem;
+	}
+
+	img {
+		width: 100%;
+	}
+
+	.entry-header {
+		margin: 0;
+		clear: both;
+	}
+
+	.entry-date{
+		float: left;
+		p {
+			font-size: 14px;
+			color: #808080;
+		}
+	}
+
+	.entry-category {
+		float: right;
+
+		a{
+			color: black;
+			text-decoration: none;
+		}
+
+	}
+
+	.entry-author p {
+		font-size: 14px;
+		color: #666666;
+		text-transform: uppercase;
+	}
+	
+	.entry-read-more {
+		display: block;
+		margin-top: 10px;
+	}
+}
+
+
+@media( min-width: $breakpoint-xs ){
+	.entry-item {
+		flex-basis: 50%;
+		max-width: 50%;
+	}
+
+	.column-list {
+		flex-basis: 100%;
+		max-width: 100%;
+	}
+}
+
+@media( min-width: $breakpoint-sm ){
+	
+	.column-half {
+		flex-basis: 50%;
+		max-width: 50%;
+	}
+
+	.column-quarter {
+		flex-basis: 25%;
+		max-width: 25%;
+	}
+
+	.column-third {
+		flex-basis: 33.33333333%;
+		max-width: 33.33333333%;
+	}
+
+}
+
+
+
+.entry-related .entry-title {
+	margin-top: 0.5rem;
+	color: black;
+	font-weight: 400;
+	line-height: 1.1;
+}

@@ -1,0 +1,1110 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="https://free-time-katas.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://free-time-katas.github.io/" rel="alternate" type="text/html" /><updated>2018-04-03T20:56:23+02:00</updated><id>https://free-time-katas.github.io/</id><title type="html">Free Time Katas</title><subtitle>Me estanca programar y descubrir tecnologías nuevas o que aun no hayan pasado por mis manos. En este blog subiré guías de todo aquello que me apasione y me haga disfrutar ya sea de back-end o front-end.</subtitle><entry><title type="html">▷ Guía de Git | Aprende todos sus comandos básicos</title><link href="https://free-time-katas.github.io/git/" rel="alternate" type="text/html" title="▷ Guía de Git | Aprende todos sus comandos básicos" /><published>2017-12-17T06:27:47+01:00</published><updated>2017-12-17T06:27:47+01:00</updated><id>https://free-time-katas.github.io/git</id><content type="html" xml:base="https://free-time-katas.github.io/git/">&lt;p&gt;A lo largo de este curso de git aprenderemos cosas como ¿que son los hooks? ¿que son ramas? ¿como fusionarlas? etc.&lt;/p&gt;
+
+&lt;h2 id=&quot;qué-es-git&quot;&gt;¿Qué es git?&lt;/h2&gt;
+&lt;p&gt;Git es un sistema de control de versiones creado por &lt;strong&gt;Linus Torvalds.&lt;/strong&gt; Un sistema de control de versiones registra los cambios realizados en un archivo o conjunto de archivos.&lt;/p&gt;
+
+&lt;p&gt;Para explicarlo mejor imagina que tenemos un proyecto y en este proyecto tenemos muchos archivos, todos sus archivos en algún punto se van a convertir en nuestra versión inicial o versión 1 de nuestro proyecto. Después vamos a tener una versión 2 y conforme pasa el tiempo vamos a ir teniendo diferentes versiones.&lt;/p&gt;
+
+&lt;p&gt;Git lo que hace es monitorear todo lo que hacemos en nuestro proyecto ya se añadir, cambiar o eliminar líneas de código. Una de las ventajas que tenemos cuando usamos git es que podemos cambiar de versión de una forma muy sencilla y directa. Supongamos que tenemos un error en la versión 3 pero en la versión 2 no lo teníamos, entonces podemos ir a la versión 2 y buscar cuál fue el error que causa que no funcionen las cosas bien en la versión 3.&lt;/p&gt;
+
+&lt;p&gt;En git tenemos tres estados:&lt;/p&gt;
+&lt;ol&gt;
+ 	&lt;li&gt;&lt;strong&gt; Working directory&lt;/strong&gt; aquí es donde normalmente estamos y trabajamos con nuestros proyectos es decir, aquí es donde abrimos nuestro editor de código y empezamos a hacer magia.&lt;/li&gt;
+ 	&lt;li&gt;&lt;strong&gt;Staging area&lt;/strong&gt; aquí es donde escogemos que archivos están listos para pasar al último estado y también decidimos que archivos no lo están listos por ejemplo: supongamos que tenemos un archivo html que ya esta listo y un archivo css que aun no lo esta listo. En el staging area elegimos que nuestro html pasa a la siguiente fase pero nuestro css no.&lt;/li&gt;
+ 	&lt;li&gt;&lt;strong&gt;Repository&lt;/strong&gt; aquí se registró todo los commit que hicimos a lo largo de nuestro proyecto.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Entonces recapitulando nuestro flujo de trabajo va a ser:&lt;/p&gt;
+&lt;ol&gt;
+ 	&lt;li&gt;Modificar, crear o editar una serie de archivos.&lt;/li&gt;
+ 	&lt;li&gt;Escoger los archivos que están listos.&lt;/li&gt;
+ 	&lt;li&gt;Registrar los archivos que están listos.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;como-instalar-git&quot;&gt;¿Como instalar git?&lt;/h2&gt;
+&lt;p&gt;La instalación de git es muy sencilla y está tanto para windows para linux y como para mac.&lt;/p&gt;
+
+&lt;p&gt;Nos dirigimos a la página oficial de git y seleccionamos nuestro sistema operativo. Para windows y mac es una instalación típica, siguiente siguiente siguiente. En windows vamos a tener un extra y es que la instalación de git instala un terminal donde vamos a poder ejecutar comandos de git y olvidarnos del cmd de windows.&lt;/p&gt;
+
+&lt;p&gt;La instalación de linux es a través de la terminal y el gestor de paquetes. Simplemente ejecutamos el comando, que la página oficial de git nos facilita, en función de la distribución que uses y listo.&lt;/p&gt;
+
+&lt;h2 id=&quot;configuración-básica-de-git&quot;&gt;Configuración básica de git&lt;/h2&gt;
+&lt;p&gt;El siguiente paso es hacer unas configuraciones básicas, para ello vamos a abrir la terminal y en el caso de windows vamos a abrir la nueva consola que nos instaló el paquete de git.&lt;/p&gt;
+
+&lt;p&gt;Lo primero es configurar nuestro nombre. Para ello solo tenemos que ejecutar:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git config --global user.name &quot;aqui tu nombre&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Lo siguiente es configurar nuestro email. Igual que antes ejecutamos el siguiente comando:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git config --global user.email &quot;aquí tu email&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Si queremos ver la configuración siempre podremos ejecutar:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git config --global user.name
+git config --global user.email
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;También tenemos la opción de configurar los colores pero, esto es opcional aunque te lo recomiendo mucho porque siempre nos va a arrojar diferentes resultados, diferentes mensajes dependiendo de lo que estemos haciendo. Con esta configuración le decimos a git que los pinte de distintos colores esos resultados así distinguimos mejor que lo que nos está diciendo git. Para ellos solo ejecutamos el siguiente comando:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git config --global color.ui true
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Ahora ya tenemos configurado los colores.&lt;/p&gt;
+
+&lt;p&gt;Si queremos ver toda nuestras configuraciones globales podemos ejecutar el comando:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git config --global --list
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;y esto nos va a dar un listado de nuestras configuraciones de lo que acabamos de hacer.&lt;/p&gt;
+
+&lt;h2 id=&quot;como-inicializar-git-en-un-proyecto&quot;&gt;¿Como inicializar git en un proyecto?&lt;/h2&gt;
+&lt;p&gt;Al fin vamos a empezar nuestro primer proyecto git. Para ello tengo una página bastante sencilla pero, con la que iremos 
+trabajando y aprendiendo todos los comandos de git.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/proyecto-git.png&quot; alt=&quot;Ejemplo 1 grid bootstrap 4&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Primero no vamos a la terminal, nos movemos al directorio de nuestro proyecto y ejecutamos el primer comando de git:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git init
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Con este comando le indicamos a git que inicialice un repositorio nuevo. A partir de ahora git va a empezar a llevar el 
+seguimiento de todo lo que ocurre dentro de nuestro proyecto, da igual si añadimos, borramos o actualizamos un fichero, git se enterará.&lt;/p&gt;
+
+&lt;p&gt;Este comando solo se utiliza una vez en cada inicialización.&lt;/p&gt;
+
+&lt;h3 id=&quot;git-status&quot;&gt;Git status&lt;/h3&gt;
+&lt;p&gt;Para saber el estado que se encuentra nuestro proyecto ejecutamos:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git status
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/git-status.png&quot; alt=&quot;Ejemplo 1 grid bootstrap 4&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Como vemos nos muestra un listado de archivos pero, git nos esta indicado que aun no han sido añadido al repositorio.&lt;/p&gt;
+
+&lt;h3 id=&quot;git-add&quot;&gt;Git add&lt;/h3&gt;
+&lt;p&gt;Como vimos en el punto anterior teníamos archivos y directorios que aun no teníamos añadidos en nuestro repositorio. 
+Para añadir un archivo en el repositorio simplemente ejecutamos:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git add index.php
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Ahora si volvemos a ejecutar:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git status
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/git-status-2.png&quot; alt=&quot;Ejemplo 1 grid bootstrap 4&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Nos muestra el mismo listado pero ya tenemos nuestro index.php añadido en el repositorio.&lt;/p&gt;
+
+&lt;p&gt;Tal vez en tu proyecto tengas muchos fichero y añadir uno a uno puede ser un poco coñazo. Para evitar eso git tiene un 
+comando para añadir todo de golpe:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git add -A 
+ó 
+git add --all
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;git-commit&quot;&gt;Git commit&lt;/h3&gt;
+&lt;p&gt;Vale ya tenemos archivos añadidos en nuestro repositorio de git pero, ¿para que hacemos esto? Bueno aquí empieza una de 
+las partes más importante de tener un repositorio git y es poder commitear el estado actual de nuestro repositorio. 
+Para hacerlo están sencillo como ejecutar:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git commit -m &quot;esto es un mensaje&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/git-commit.png&quot; alt=&quot;Ejemplo 1 grid bootstrap 4&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Esto lo que hará es hacer una foto del estado actual de nuestro repositorio. El mensaje es muy importante y tiene que 
+ser lo más descriptivo posible.&lt;/p&gt;
+
+&lt;p&gt;Ahora si de nuevo ejecutamos:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git status
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/git-status-3.png&quot; alt=&quot;Ejemplo 1 grid bootstrap 4&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Como puedes ver ya no tenemos nada.&lt;/p&gt;
+
+&lt;p&gt;Vamos a repetir el proceso pero, para ello vamos a modificar un fichero y vamos a volver a ejecutar:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git status 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/git-status-4.png&quot; alt=&quot;Ejemplo 1 grid bootstrap 4&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Como puedes ver git nos esta indicado que se ha modificado el fichero. En esta ocasión aparece en verde y no en rojo 
+¿por que? Porque ya agregamos anteriormente el fichero a nuestro repositorio y simplemente lo hemos modificado. 
+Si añado uno nuevo y ejecuto:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git status
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/git-status-5.png&quot; alt=&quot;Ejemplo 1 grid bootstrap 4&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Como ves ahora si me dice que tengo un fichero no añadido.&lt;/p&gt;
+
+&lt;p&gt;Ejecutamos:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git add -A
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Esto lo que hará es añadirme el nuevo fichero y ya solo queda hacer la foto estatica para que git se la guarde. 
+Para ello ejecutamos:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git commit -m &quot;Nuevo fichero y modificado el anterior&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Con eso nuestro repositorio esta limpio y ya podemos continuar.&lt;/p&gt;
+
+&lt;h3 id=&quot;git-log&quot;&gt;Git log&lt;/h3&gt;
+&lt;p&gt;Este comando de git es muy interesante si queremos ver el historia de nuestros commits. Si ejecutamos:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git log 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;esta es la info que nos devuelve:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/git-log.png&quot; alt=&quot;git log&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Pero, ¿qué significa esto?&lt;/p&gt;
+&lt;ol&gt;
+ 	&lt;li&gt;&lt;strong&gt;commit: &lt;/strong&gt;Es un identificador único para el commit.&lt;/li&gt;
+ 	&lt;li&gt;&lt;strong&gt;Author: &lt;/strong&gt;Nombre y email del creador del commit.&lt;/li&gt;
+ 	&lt;li&gt;&lt;strong&gt;Date: &lt;/strong&gt;La fecha de creación del commit.&lt;/li&gt;
+ 	&lt;li&gt;Y el mensaje que pusimos en el commit.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;git-checkout&quot;&gt;Git checkout&lt;/h3&gt;
+&lt;p&gt;Al principio del post comenté que con git podríamos ir de una versión a otra de nuestro proyecto, eso significa que 
+podemos movernos entre commit con total libertad. No solo podemos movernos entre commit si no entre ramas y entre tags. 
+Las ramas y los tags los veremos un poco más adelante.&lt;/p&gt;
+
+&lt;p&gt;¿Recuerdas el identificador del commit que nos daba git logs? pues vamos a usarlo para movernos entre los commits. 
+Para ello ejecutamos:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git checkout &amp;lt;identificador-commit&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/git-checkout.png&quot; alt=&quot;git checkout&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Si verificamos nuestro código podremos ver que estamos en una versión anterior a la que estábamos. Si ejecutamos:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git log
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/git-log-2.png&quot; alt=&quot;git log 2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;nuestro último commit ha desaparecido. Bueno realmente no ha desaparecido simplemente que en el punto donde estamos ese 
+commit aun no ha ocurrido. Para regresar al punto donde estabamos ejecutamos:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git checkout master
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Si nos fijamos ya ha vuelto nuestro código a su estado final.&lt;/p&gt;
+
+&lt;h3 id=&quot;git-reset&quot;&gt;Git reset&lt;/h3&gt;
+&lt;p&gt;En git tenemos algo muy útil pero al mismo tiempo muy peligroso si no se usa bien.&lt;/p&gt;
+
+&lt;p&gt;Imaginate que has estado programando una nueva funcionalidad y después de hacer commit te das cuenta de que tiene 
+errores y quieres deshacer el commit. Bueno pues aquí entra la magia de git reset. Este comando tiene tres formas de 
+ejecutarlo y vamos a verlos uno a uno.&lt;/p&gt;
+
+&lt;h4 id=&quot;git-reset-soft&quot;&gt;git reset –soft&lt;/h4&gt;
+&lt;p&gt;Primero vamos a ver el estado actual de nuestro repositorio con:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git log
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/git-log-3.png&quot; alt=&quot;git log 3&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Imaginemos que el commit f41fb613902f9b7cc47f1fdb23de392d6238a57a queremos deshacerlo, pues ejecutamos:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git reset --soft 48cb8d5c37c0298b0ddb9a037996d8df27ac931f
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Si te fijas he cogido el commit anterior al que quiero deshacer.&lt;/p&gt;
+
+&lt;p&gt;Si ahora ejecutamos:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git log
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/git-log-4.png&quot; alt=&quot;git log 4&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;veras que ahora solo tenemos un commit y si ejecutamos:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git status 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/git-status-6.png&quot; alt=&quot;git status 6&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;tenemos todos los cambios que se hicieron en el commit que hemos desecho.&lt;/p&gt;
+
+&lt;h4 id=&quot;git-reset-mixed&quot;&gt;git reset –mixed&lt;/h4&gt;
+&lt;p&gt;Igual que hemos hecho antes, primero vamos a ver el estado de nuestro repositorio con un:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git log
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/git-log-5.png&quot; alt=&quot;git log 5&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Igual que antes vamos a deshacer el último commit pero esta vez con mixed para que podamos ver la diferencia. 
+Para ello ejecutamos:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git reset --mixed 48cb8d5c37c0298b0ddb9a037996d8df27ac931f
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Si verificamos los logs:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git log 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/git-log-6.png&quot; alt=&quot;git log 6&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;podemos ver que el resultado es el mismo que con soft pero, si ejecutamos:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git status
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/git-status-7.png&quot; alt=&quot;git status 7&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;aquí es donde vemos cambios. La diferencia entre git reset soft y git reset mixed es que mixed saca los ficheros nuevos, 
+que tuviese ese commit, fuera de nuestro repositorio, es como si deshiciese el git add.&lt;/p&gt;
+
+&lt;h4 id=&quot;git-reset-hard&quot;&gt;git reset –hard&lt;/h4&gt;
+&lt;p&gt;Esta es la opción más dura y que más cuidado tenemos que tener de git reset. Para no perder la costumbre vamos a ver 
+el estado del repositorio con:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git log
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/git-log-7.png&quot; alt=&quot;git log 7&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Ahora vamos a ejecutar:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git reset --hard 48cb8d5c37c0298b0ddb9a037996d8df27ac931f
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Si miramos nuestros logs:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git log
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/git-log-8.png&quot; alt=&quot;git log 8&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Podemos comprobar que ha deshecho el commit perfectamente pero, si verfificamos el status:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git status
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/git-status-8.png&quot; alt=&quot;git status 8&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;esta totalmente limpio. Eso significa que git ha deshecho el commit pero, ha borrado todos los cambios que tenia el commit.&lt;/p&gt;
+
+&lt;p&gt;Hay que tener mucho cuidado con este reset porque podríamos borrar cosas por accidente.&lt;/p&gt;
+
+&lt;h3 id=&quot;git-help&quot;&gt;git help&lt;/h3&gt;
+&lt;p&gt;Bueno ahora te presento un comando que no ayuda a orientarnos un poco en las diferentes opciones que tiene git. Es una 
+pequeña documentación que nos viene muy bien cuando no recordamos algún comando. Para que nos muestre la ayuda 
+simplemente ejecutamos:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git help 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/git-help.png&quot; alt=&quot;git help&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;y nos muestra la ayuda.&lt;/p&gt;</content><author><name>David Díaz</name></author><summary type="html">En este curso de Git aprederás como ser un auténtico guru. Si aun no has trabajado con este control de versiones no pierdas más tiempo y pásate al siglo XXI.</summary></entry><entry><title type="html">▷ Como añadir los Rich Snippet en wordpress | Posiciona mejor en Google</title><link href="https://free-time-katas.github.io/rich-snippet/para-wordpress.html" rel="alternate" type="text/html" title="▷ Como añadir los Rich Snippet en wordpress | Posiciona mejor en Google" /><published>2017-09-03T07:27:47+02:00</published><updated>2017-09-03T07:27:47+02:00</updated><id>https://free-time-katas.github.io/rich-snippet/rich-snippet-wordpress</id><content type="html" xml:base="https://free-time-katas.github.io/rich-snippet/para-wordpress.html">&lt;p&gt;Implementar los Rich Snippet en Wordpress es tan sencillo como instalar un plugin y rellenar las opciones que nos pide.
+De esta forma podemos destacar un poquito más en Google y que nuestros artículos o post estén entre las primeras
+posiciones. Si estas preparado vamos a por ello.&lt;/p&gt;
+
+&lt;h2 id=&quot;como-instalar-all-in-one-schemaorg-rich-snippets-en-wordpress&quot;&gt;¿Como instalar All In One Schema.org Rich Snippets en Wordpress?&lt;/h2&gt;
+&lt;p&gt;La instalación de es plugin es muy sencilla y solo tenemos que seguir los siguiente pasos:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;No vamos a la &lt;strong&gt;sección plugins&lt;/strong&gt; de nuestro wordpress y a &lt;strong&gt;añadir nuevo&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;En la caja de búsqueda &lt;strong&gt;buscamos rich snippet&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;El primero que sale es el que queremos y &lt;strong&gt;pulsamos en instalar ahora&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;Cuando instale le damos a &lt;strong&gt;activar&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/instalar-all-in-one-schema-rich-snippets.jpg&quot; alt=&quot;Instalacción all in one schema.org Rich Snippets&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Y listo!! con estos sencillos pasos ya tenemos el plugin listo para usarlo.&lt;/p&gt;
+
+&lt;h2 id=&quot;como-añadir-los-rich-snippets-en-los-post-de-wordpress&quot;&gt;¿Como añadir los Rich Snippets en los post de wordpress?&lt;/h2&gt;
+&lt;p&gt;Una vez que tenemos el plugin instalado y activado solo nos queda empezar a sacar su potencia en nuestros post.
+Para ello nos vamos a unos de nuestros post y en la parte de abajo tenemos una nueva opción.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/implementar-rich-snippet-en-wordpres-1.jpg&quot; alt=&quot;Implementar Rich Snippet en Wordpress 1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;El plugin nos da la opción de implementar varios:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Item Review&lt;/li&gt;
+  &lt;li&gt;Event&lt;/li&gt;
+  &lt;li&gt;People&lt;/li&gt;
+  &lt;li&gt;Product&lt;/li&gt;
+  &lt;li&gt;Recipe&lt;/li&gt;
+  &lt;li&gt;Software Application&lt;/li&gt;
+  &lt;li&gt;Video&lt;/li&gt;
+  &lt;li&gt;Article&lt;/li&gt;
+  &lt;li&gt;Service&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Para la demostración yo voy a elegir Article. 
+Una vez seleccionado, nos muestra un formulario que debemos rellenar con los datos del artículo&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/implementar-rich-snippet-en-wordpres-2.jpg&quot; alt=&quot;Implementar Rich Snippet en Wordpress 2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Una vez que terminemos de de rellenar todos los datos simplemente le damos a publicar y ya lo tendremos todo listo.&lt;/p&gt;</content><author><name>David Díaz</name></author><summary type="html">Implementar los rich snippets en Wordpress es muy muy fácil y sin ningún conocimiento puedes añadirlos. Aquí te lo cuento todo.</summary></entry><entry><title type="html">▷ ¿Qué son los Rich Snippet? Te contamos todo los que necesitas saber</title><link href="https://free-time-katas.github.io/rich-snippet/" rel="alternate" type="text/html" title="▷ ¿Qué son los Rich Snippet? Te contamos todo los que necesitas saber" /><published>2017-09-03T07:27:46+02:00</published><updated>2017-09-03T07:27:46+02:00</updated><id>https://free-time-katas.github.io/rich-snippet</id><content type="html" xml:base="https://free-time-katas.github.io/rich-snippet/">&lt;p&gt;Cada día buscamos más que nuestros resultados en las SERP sea los más destacados y aumente el CRT. Ahora tenemos la 
+posibilidad de añadir &lt;strong&gt;los Rich Snippet (Fragmentos Enriquecidos)&lt;/strong&gt; para que nuestros resultados en Google sea más visibles.
+Tengo que advertir que no por tener los Rich Snippet en nuetra web Google los va a usar en sus resultados. A día de hoy 
+la decisión de interpretarlos y mostrarlos en los resultados de búsqueda es de Google pero, hay que decir que es interesante
+ponerlos y esperar con ilusión que los saque.&lt;/p&gt;
+
+&lt;p&gt;Dicho esto, en este artículo explicaremos como podemos implementarlos en nuestras webs, algunos tipos, como validarlos, etc.&lt;/p&gt;
+
+&lt;p&gt;Aquí tenéis el índice:&lt;/p&gt;
+
+&lt;h2 id=&quot;tipos-de-rich-snippets&quot;&gt;Tipos de Rich Snippets&lt;/h2&gt;
+
+&lt;div class=&quot;flex flex-fluid&quot;&gt;
+
+    &lt;article class=&quot;entry-item entry-item column-third&quot;&gt;
+        &lt;header class=&quot;entry-header&quot;&gt;
+            &lt;a href=&quot;https://free-time-katas.github.io/rich-snippet/para-wordpress.html&quot; rel=&quot;bookmark&quot;&gt;
+                
+                &lt;img src=&quot;https://free-time-katas.github.io/img/rich-snippet-para-wordpress.jpg&quot; class=&quot;attachment-thumbnail-center size-thumbnail-center wp-post-image&quot; alt=&quot;Rich Snippet para Wordpress&quot; width=&quot;390&quot; height=&quot;200&quot; /&gt;
+                &lt;h3 class=&quot;entry-title&quot;&gt;Como añadir los Rich Snippet en wordpress - Todo en un plugin -&lt;/h3&gt;
+            &lt;/a&gt;
+        &lt;/header&gt;
+        &lt;div class=&quot;entry-meta&quot;&gt;
+            &lt;div class=&quot;entry-excerpt&quot;&gt;
+                &lt;p&gt;Implementar los rich snippets en Wordpress es muy muy fácil y sin ningún conocimiento puedes añadirlos. Aquí te lo cuento todo.
+                    &lt;a class=&quot;entry-read-more&quot; href=&quot;https://free-time-katas.github.io/rich-snippet/para-wordpress.html&quot;&gt;&lt;/a&gt;
+                &lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/article&gt;
+
+&lt;/div&gt;
+&lt;h2 id=&quot;qué-son-los-rich-snippets-o-fragmentos-enriquecidos&quot;&gt;¿Qué son los Rich Snippets o Fragmentos Enriquecidos?&lt;/h2&gt;
+&lt;p&gt;Son fragmentos de código que añadimos en nuestras webs y facilita tanto la lectura como la compresión a las arañas de los
+buscadores. Esto hace que los buscadores modifiquen los resultados y los muestre de una forma diferente &lt;strong&gt;en función del 
+tipo de Rich Snippet.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;ejemplo-de-resultado-con-rich-snippet&quot;&gt;Ejemplo de resultado con Rich Snippet&lt;/h3&gt;
+&lt;p&gt;Aquí tenéis un ejemplo de un resultado con fragmentos enriquecidos&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/ejemplo-con-rich-snippet.jpg&quot; alt=&quot;Ejemplo con rich snippet&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;ejemplo-de-resultado-sin-rich-snippet&quot;&gt;Ejemplo de resultado sin Rich Snippet&lt;/h3&gt;
+&lt;p&gt;Como váis a ver en el siguiente resultado la diferencia entre con y sin es bastante significativa no?&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/ejemplo-sin-rich-snippet.jpg&quot; alt=&quot;Ejemplo sin rich snippet&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;comó-crear-los-rich-snippets&quot;&gt;¿Comó crear los Rich Snippets?&lt;/h2&gt;
+&lt;p&gt;Crealos es relativamente sencillo pero, tiene la dificultad de que no se nos olvide ningún atributo. Si esto pasase 
+Google lo marcaría en Google Search Console como error.
+Si no utilizamos ningún CMS que tenga algún plugin que nos ayude con la creación, siempre podemos acudir a alguna 
+herramienta online que nos facilite la creación.&lt;/p&gt;
+
+&lt;p&gt;Os voy aconsejar algunas herramientas online para crear Rich Snippet:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://hallanalysis.com/json-ld-generator/&quot; target=&quot;_blank&quot;&gt;https://hallanalysis.com/json-ld-generator/&lt;/a&gt;
+&lt;img src=&quot;/img/hallanalysis-generador-rich-snippet.jpg&quot; alt=&quot;hallanalysis generador rich snippet&quot; /&gt;
+Esta web nos permite seleccionar varios tipos y nos genera un código para que lo pegamos en nuestra web&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://tools.ranksider.com/rich-snippets/product&quot; target=&quot;_blank&quot;&gt;http://tools.ranksider.com/rich-snippets/product&lt;/a&gt;
+&lt;img src=&quot;/img/ranksider-generador-rich-snippet.jpg&quot; alt=&quot;ranksider generador rich snippet&quot; /&gt;
+Otra web muy parecida a la anterior donde nos da un formulario muy cómodo y tenemos que completarlo.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://microdatagenerator.com/generator.html&quot; target=&quot;_blank&quot;&gt;http://microdatagenerator.com/generator.html&lt;/a&gt;
+&lt;img src=&quot;/img/microdatagenerator-generador-rich-snippet.jpg&quot; alt=&quot;microdatagenerator generador rich snippet&quot; /&gt;
+Lo interesante de esta web es que te genera los rich snippet para negocios locales y te deja elegir el tipo de negocio.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;donde-colocar-los-rich-snippets&quot;&gt;¿Donde colocar los Rich Snippets?&lt;/h2&gt;
+&lt;p&gt;Normalmente los solemos encontrar en dos formatos: &lt;strong&gt;JSON-LD&lt;/strong&gt; o &lt;strong&gt;Microdata&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;En el caso del JSON-LD es un objeto json que se mete dentro de las etiquetas script de html. Este fragmento se podría
+colocar en cualquier punto del código fuente de nuestra web pero, yo suelo aconsejar colocarlo lo más abajo posible
+del código fuente y siempre dentro de la etiqueta html.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Un ejemplo de JSON-LD&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;script type=&quot;application/ld+json&quot;&amp;gt;
+{
+  &quot;@context&quot;: &quot;http://schema.org&quot;,
+  &quot;@type&quot;: &quot;Article&quot;,
+  &quot;author&quot;: &quot;John Doe&quot;,
+  &quot;interactionStatistic&quot;: [
+    {
+      &quot;@type&quot;: &quot;InteractionCounter&quot;,
+      &quot;interactionService&quot;: {
+        &quot;@type&quot;: &quot;Website&quot;,
+        &quot;name&quot;: &quot;Twitter&quot;,
+        &quot;url&quot;: &quot;http://www.twitter.com&quot;
+      },
+      &quot;interactionType&quot;: &quot;http://schema.org/ShareAction&quot;,
+      &quot;userInteractionCount&quot;: &quot;1203&quot;
+    },
+    {
+      &quot;@type&quot;: &quot;InteractionCounter&quot;,
+      &quot;interactionType&quot;: &quot;http://schema.org/CommentAction&quot;,
+      &quot;userInteractionCount&quot;: &quot;78&quot;
+    }
+  ],
+  &quot;name&quot;: &quot;How to Tie a Reef Knot&quot;
+}
+&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;En el caso de los microdata son atributos que se colocan en las etiquetas html.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Un ejemplo de microdata&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;div itemscope itemtype=&quot;http://schema.org/Article&quot;&amp;gt;
+  &amp;lt;span itemprop=&quot;name&quot;&amp;gt;How to Tie a Reef Knot&amp;lt;/span&amp;gt;
+  by &amp;lt;span itemprop=&quot;author&quot;&amp;gt;John Doe&amp;lt;/span&amp;gt;
+  This article has been tweeted 1203 times and contains 78 user comments.
+  &amp;lt;div itemprop=&quot;interactionStatistic&quot; itemscope itemtype=&quot;http://schema.org/InteractionCounter&quot;&amp;gt;
+    &amp;lt;div itemprop=&quot;interactionService&quot; itemscope itemid=&quot;http://www.twitter.com&quot; itemtype=&quot;http://schema.org/Website&quot;&amp;gt;
+      &amp;lt;meta itemprop=&quot;name&quot; content=&quot;Twitter&quot; /&amp;gt;
+    &amp;lt;/div&amp;gt;
+    &amp;lt;meta itemprop=&quot;interactionType&quot; content=&quot;http://schema.org/ShareAction&quot;/&amp;gt;
+    &amp;lt;meta itemprop=&quot;userInteractionCount&quot; content=&quot;1203&quot; /&amp;gt;
+  &amp;lt;/div&amp;gt;
+  &amp;lt;div itemprop=&quot;interactionStatistic&quot; itemscope itemtype=&quot;http://schema.org/InteractionCounter&quot;&amp;gt;
+    &amp;lt;meta itemprop=&quot;interactionType&quot; content=&quot;http://schema.org/CommentAction&quot;/&amp;gt;
+    &amp;lt;meta itemprop=&quot;userInteractionCount&quot; content=&quot;78&quot; /&amp;gt;
+  &amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt; 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Cualquiera de los dos formatos es totalmente válido y ya va por gustos para quien lo implemente.&lt;/p&gt;
+
+&lt;h2 id=&quot;como-validar-los-rich-snippets&quot;&gt;¿Como validar los Rich Snippets?&lt;/h2&gt;
+&lt;p&gt;Esto es una parte muy importante para que Google no nos reporte un error en los Rich Snippet.
+Os voy a aconsejar varias herramientas online para poder validar vuestros códigos.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://search.google.com/structured-data/testing-tool?hl=es&quot; target=&quot;_blank&quot;&gt;https://search.google.com/structured-data/testing-tool?hl=es&lt;/a&gt;
+&lt;img src=&quot;/img/google-validador-rich-snippet.jpg&quot; alt=&quot;google validador rich snippet&quot; /&gt;
+El propio google tiene su propia herramienta para la validación de los fragmentos enriquecidos así que… usémosla.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://webmaster.yandex.com/tools/microtest/&quot; target=&quot;_blank&quot;&gt;https://webmaster.yandex.com/tools/microtest/&lt;/a&gt;
+&lt;img src=&quot;/img/yandex-validador-rich-snippet.jpg&quot; alt=&quot;yandex validador rich snippet&quot; /&gt;
+Aquí tenéis otra herramienta de validación muy buena por si la de google falla.&lt;/li&gt;
+&lt;/ol&gt;</content><author><name>David Díaz</name></author><summary type="html">¿Como implementarlo en nuestra web? ¿Qué tipos hay? ¿Lo puedo poner en wordpress? Estas preguntas y muchas más las tienes aquí.</summary></entry><entry><title type="html">▷ Bootstrap 4 beta, os contamos sus novedades</title><link href="https://free-time-katas.github.io/bootstrap-4-beta.html" rel="alternate" type="text/html" title="▷ Bootstrap 4 beta, os contamos sus novedades" /><published>2017-08-26T07:27:47+02:00</published><updated>2017-08-26T07:27:47+02:00</updated><id>https://free-time-katas.github.io/bootstrap-4-beta</id><content type="html" xml:base="https://free-time-katas.github.io/bootstrap-4-beta.html">&lt;p&gt;&lt;em&gt;El equipo de Bootstrap lleva dos años trabajando en su nueva versión&lt;/em&gt; y por fin ya tenemos su
+versión beta.&lt;/p&gt;
+
+&lt;p&gt;En su página web nos cuentan un poco como ha ido en desarrollo en números, &lt;em&gt;han escrito 67.000 nuevas líneas, ha borrado
+82.000 líneas, han realizado 5.000 commit y han cambiado más de 650 ficheros.&lt;/em&gt; Estos números nos indica que básicamente 
+han reescrito en framework entero.&lt;/p&gt;
+
+&lt;p&gt;Dicho esto… vamos a probar esta versión beta de bootstrap 4 y veamos que cosas nuevas trae.&lt;/p&gt;
+
+&lt;h2 id=&quot;novedades-bootstrap-4&quot;&gt;Novedades bootstrap 4&lt;/h2&gt;
+&lt;h3 id=&quot;cambio-en-el-preprocesador-de-css&quot;&gt;Cambio en el preprocesador de css&lt;/h3&gt;
+&lt;p&gt;Bootstrap en versiones anteriores trabajaba con less y en esta última versión ha pasado todas sus líneas de código a 
+sass. Es una buena decisión ya que la comunidad de desarrolladores que hay es más grande en sass.&lt;/p&gt;
+
+&lt;h3 id=&quot;nuevo-sistema-de-grid&quot;&gt;Nuevo sistema de grid&lt;/h3&gt;
+&lt;p&gt;Uno de los cambios, a mi parecer, más importantes es el cambio del grid o de su sistema de rejilla. Ahora la nueva versión
+de boostrap va a usar flexbox.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Si quieres saber más sobre flexbox pasate por la &lt;a href=&quot;guia-flexbox.html&quot;&gt;guia flexbox&lt;/a&gt; donde explico su potencia.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Este nuevo sistema de grib es mucho más fácil de implementar:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;div class=&quot;container&quot;&amp;gt;
+    &amp;lt;div class=&quot;row&quot;&amp;gt;
+        &amp;lt;div class=&quot;col&quot;&amp;gt;
+            1 of 2
+        &amp;lt;/div&amp;gt;
+        &amp;lt;div class=&quot;col&quot;&amp;gt;
+            2 of 2
+        &amp;lt;/div&amp;gt;
+    &amp;lt;/div&amp;gt;
+    &amp;lt;div class=&quot;row&quot;&amp;gt;
+        &amp;lt;div class=&quot;col&quot;&amp;gt;
+            1 of 3
+        &amp;lt;/div&amp;gt;
+        &amp;lt;div class=&quot;col&quot;&amp;gt;
+            2 of 3
+        &amp;lt;/div&amp;gt;
+        &amp;lt;div class=&quot;col&quot;&amp;gt;
+            3 of 3
+        &amp;lt;/div&amp;gt;
+    &amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/grid-1-bootstrap-4.jpg&quot; alt=&quot;Ejemplo 1 grid bootstrap 4&quot; /&gt;//&lt;/p&gt;
+
+&lt;p&gt;Ahora solo le indicamos que queremos una nueva columna y el automáticamente redimensiona las columnas automáticamente
+sin tenerle que especificar los diferentes tamaños.&lt;/p&gt;
+
+&lt;p&gt;Podemos seguir forzando que una columna ocupe más que otras:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;div class=&quot;container&quot;&amp;gt;
+    &amp;lt;div class=&quot;row&quot;&amp;gt;
+        &amp;lt;div class=&quot;col&quot;&amp;gt;
+            1 of 3
+        &amp;lt;/div&amp;gt;
+        &amp;lt;div class=&quot;col-6&quot;&amp;gt;
+            2 of 3 (wider)
+        &amp;lt;/div&amp;gt;
+        &amp;lt;div class=&quot;col&quot;&amp;gt;
+            3 of 3
+        &amp;lt;/div&amp;gt;
+    &amp;lt;/div&amp;gt;
+    &amp;lt;div class=&quot;row&quot;&amp;gt;
+        &amp;lt;div class=&quot;col&quot;&amp;gt;
+            1 of 3
+        &amp;lt;/div&amp;gt;
+        &amp;lt;div class=&quot;col-5&quot;&amp;gt;
+            2 of 3 (wider)
+        &amp;lt;/div&amp;gt;
+        &amp;lt;div class=&quot;col&quot;&amp;gt;
+            3 of 3
+        &amp;lt;/div&amp;gt;
+    &amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/grid-2-bootstrap-4.jpg&quot; alt=&quot;Ejemplo 2 grid bootstrap 4&quot; /&gt;//&lt;/p&gt;
+
+&lt;h3 id=&quot;nuevas-tarjetas-tipo-material-design&quot;&gt;Nuevas tarjetas tipo material design&lt;/h3&gt;
+&lt;p&gt;Esto es una de las cosas más chulas porque en versiones anteriores de bootstrap no existía. Este cambio permite hacer
+cosas como estas:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/tarjetas-bootstrap-4.jpg&quot; alt=&quot;Tarjetas bootstrap 4&quot; /&gt;//&lt;/p&gt;
+
+&lt;p&gt;Con tan solo estas líneas de código:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;div class=&quot;card&quot; style=&quot;width: 20rem;&quot;&amp;gt;
+    &amp;lt;img class=&quot;card-img-top&quot; src=&quot;...&quot; alt=&quot;Card image cap&quot;&amp;gt;
+    &amp;lt;div class=&quot;card-body&quot;&amp;gt;
+        &amp;lt;h4 class=&quot;card-title&quot;&amp;gt;Card title&amp;lt;/h4&amp;gt;
+        &amp;lt;p class=&quot;card-text&quot;&amp;gt;Some quick example text to build on the card title and make up the bulk of the card's content.&amp;lt;/p&amp;gt;
+        &amp;lt;a href=&quot;#&quot; class=&quot;btn btn-primary&quot;&amp;gt;Go somewhere&amp;lt;/a&amp;gt;
+    &amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;reset-de-normalize-css&quot;&gt;Reset de normalize css&lt;/h3&gt;
+&lt;p&gt;Normalize css lo que hace es resetear todos los estilos por defecto que vienen en los diferentes navegadores para que 
+nuestra maquetación se vea igual en todos ellos.
+El equipo de bootstrap lo que ha hecho es mejorar esa normalización de estilo lo que se traduce en que nuestras webs 
+se van a ver igual indistintamente del navegador que usemos.&lt;/p&gt;
+
+&lt;h3 id=&quot;nuevos-diseños&quot;&gt;Nuevos diseños&lt;/h3&gt;
+&lt;p&gt;Si, tenemos nuevos diseños. Si nos vamos a un elemento básico como los botones, ahora tenemos colores más planos y esquinas
+menos redondeadas.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/botones-bootstrap-4.jpg&quot; alt=&quot;Botones bootstrap 4&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;componentes-javascript&quot;&gt;Componentes javascript&lt;/h3&gt;
+&lt;p&gt;Han reescrito todos los componentes javascript para pasarlo al nuevo estándar ECMAScript 6 (ES6). De esta forma se puede
+aprovechar todas las nuevas funcionalidades que ofrece el nuevo estándar.&lt;/p&gt;
+
+&lt;p&gt;Un ejemplo de un componente totalmente renovado es el carrusel:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/carrusel-bootstrap-4.jpg&quot; alt=&quot;Carrusel bootstrap 4&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;colocación-automática-de-tooltips-popovers-y-dropdowns&quot;&gt;Colocación automática de tooltips, popovers y dropdowns&lt;/h3&gt;
+&lt;p&gt;Antiguamente teníamos que especificar la dirección donde queríamos que apareciese. En esta nueva versión ya es automático
+en función del espacio que tiene disponible.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/popover-bootstrap-4.jpg&quot; alt=&quot;Popover bootstrap 4&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;En esta ocasión el equipo de bootstrap se ha apoyado en librería Popper.js.&lt;/p&gt;
+
+&lt;h3 id=&quot;adios-a-los-iconos&quot;&gt;Adios a los iconos&lt;/h3&gt;
+&lt;p&gt;En esta nueva versión han dicho adiós a los iconos y dejan la resposibilidad de añadir iconos al desarrollador. Esto es
+una muy buena decisión ya que cada desarrollador se siente cómodo con unos iconos u otros.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/iconos-bootstrap-4.jpg&quot; alt=&quot;Iconos bootstrap 4&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;libros-bootstrap-4&quot;&gt;Libros bootstrap 4&lt;/h2&gt;
+&lt;p&gt;Os dejo unos libros de bootstrap por si queréis aprender un poco más.&lt;/p&gt;
+
+&lt;h3 id=&quot;bootstrap-4-cookbook-inglés&quot;&gt;Bootstrap 4 Cookbook (Inglés)&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.amazon.es/Bootstrap-Cookbook-Snigdhendu-Bikas-Bhaumik/dp/178588929X/&quot; target=&quot;_blank&quot; class=&quot;affiliation&quot;&gt;&lt;img src=&quot;/img/bootstrap-4-cookbook.jpg&quot; alt=&quot;Bootstrap 4 Cookbook&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;learning-bootstrap-4-second-edition-inglés&quot;&gt;Learning Bootstrap 4 Second Edition (Inglés)&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.amazon.es/Learning-Bootstrap-Second-Matt-Lambert/dp/1785881000/&quot; target=&quot;_blank&quot; class=&quot;affiliation&quot;&gt;&lt;img src=&quot;/img/learning-bootstrap-4-second-edition.jpg&quot; alt=&quot;Learning Bootstrap 4 Second Edition&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;web-development-with-bootstrap-4-and-angular-2-second-edition-inglés&quot;&gt;Web Development with Bootstrap 4 and Angular 2, Second Edition (Inglés)&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.amazon.es/Web-Development-Bootstrap-Angular-Second/dp/1785880810/&quot; target=&quot;_blank&quot; class=&quot;affiliation&quot;&gt;&lt;img src=&quot;/img/web-development-with-bootstrap-4-and-angular-2.jpg&quot; alt=&quot;Web Development with Bootstrap 4 and Angular 2, Second Edition&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</content><author><name>David Díaz</name></author><summary type="html">Si, has leído bien, después de dos años ya esta aquí la versión beta de la última versión de bootstrap. Así que vamos a jugar con ella.</summary></entry><entry><title type="html">▷ Guía de composer en español | Si eres programador PHP lee esto</title><link href="https://free-time-katas.github.io/guia-composer.html" rel="alternate" type="text/html" title="▷ Guía de composer en español | Si eres programador PHP lee esto" /><published>2017-08-12T07:27:47+02:00</published><updated>2017-08-12T07:27:47+02:00</updated><id>https://free-time-katas.github.io/guia-composer</id><content type="html" xml:base="https://free-time-katas.github.io/guia-composer.html">&lt;p&gt;En el año 2017 no concibo ningún proyecto sin un &lt;strong&gt;gestor de dependencias&lt;/strong&gt;, da igual la tecnología que uses. Para Java
+tenemos Maven, para android Gradle, para js NPM, para php Composer, etc.&lt;/p&gt;
+
+&lt;p&gt;Un gestor de dependencias te da la facilidad de poder descargar paquetes a tus proyectos y el solo va controlando las
+versiones de los mismos. Ya se queda muy atrás eso de descargar un zip e introducir mil ficheros dentro de nuestros
+proyectos.&lt;/p&gt;
+
+&lt;p&gt;Otras de las ventajas es el trabajo en el equipo, todos trabajan con la misma versión de las dependencias que pueda
+tener nuestros proyectos. Nos olvidamos de que cada miembro del equipo trabaje con versiones distintas de un mismo
+paquete.&lt;/p&gt;
+
+&lt;p&gt;Dicho todo esto vamos a ver lo fácil que es trabajar con composer en php.&lt;/p&gt;
+
+&lt;h2 id=&quot;qué-es-composer&quot;&gt;¿Qué es composer?&lt;/h2&gt;
+&lt;p&gt;Como he dicho antes composer es un gestor de dependencias para php. Con el podemos descargar desde librerías
+que alguien de la comunidad ha hecho y nos vienen fenomenal, hasta instalar framework enteros como es el caso de yii, 
+laravel, doctrine, symfony, etc. Lo bueno es que hacer esto se tarda minutos en hacer y es automático.&lt;/p&gt;
+
+&lt;h2 id=&quot;cómo-instalar-composer&quot;&gt;¿Cómo instalar composer?&lt;/h2&gt;
+&lt;p&gt;La instalación de composer ha mejorado mucho en los últimos tiempo y ahora es super sencillo instalarlo.
+Para ello lo que hacemos es ejecutar los siguientes comandos:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;php -r &quot;copy('https://getcomposer.org/installer', 'composer-setup.php');&quot;
+php -r &quot;if (hash_file('SHA384', 'composer-setup.php') === '669656bab3166a7aff8a7506b8cb2d1c292f042046c5a994c43155c0be6190fa0355160742ab2e1c88d40d5be660b410') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;&quot;
+php composer-setup.php
+php -r &quot;unlink('composer-setup.php');&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Es generará un &lt;strong&gt;composer.phar&lt;/strong&gt; en el directorio que estemos. No esta nada mal que cada proyecto tenga su &lt;strong&gt;composer.phar&lt;/strong&gt;
+pero, yo prefiero instalarlo globalmente en mi máquina.
+Para tenerlo de forma global en mac lo que hago es sustituir la tercera línea del comando anterior añadiendole
+algunos parámetros.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;php composer-setup.php --filename=composer --install-dir=/usr/local/bin/
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;El comando entero quedaría:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;php -r &quot;copy('https://getcomposer.org/installer', 'composer-setup.php');&quot;
+php -r &quot;if (hash_file('SHA384', 'composer-setup.php') === '669656bab3166a7aff8a7506b8cb2d1c292f042046c5a994c43155c0be6190fa0355160742ab2e1c88d40d5be660b410') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;&quot;
+php composer-setup.php --filename=composer --install-dir=/usr/local/bin/
+php -r &quot;unlink('composer-setup.php');&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Hecho esto desde cualquier directorio puedes ejecutar:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;composer
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Y ya puedo ver si la instalación se ha realizado correctamente.&lt;/p&gt;
+
+&lt;h2 id=&quot;cómo-usar-composer&quot;&gt;¿Cómo usar composer?&lt;/h2&gt;
+&lt;p&gt;Si el proyecto es nuevo tenemos dos opciones:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Crear el fichero de configuración a mano.&lt;/li&gt;
+  &lt;li&gt;Ejecutar “composer init”&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Aquí vamos usar la ley del mínimo esfuerzo y estando en el directorio donde va a estar nuestro proyecto, vamos a ejecutar:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;composer init
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Lo primero que nos pregutanrá es el nombre del paquete:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Package name (&amp;lt;vendor&amp;gt;/&amp;lt;name&amp;gt;) [daviddiaz/test]: diazdavid-info/test
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Yo suelo poner mi (nombre de usuario de github/nombre del proyecto)&lt;/p&gt;
+
+&lt;p&gt;Después nos pide una descripción del proyecto:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Description []: Proyecto de prueba
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Si no tenemos muy claro la descripción podemos dejarlo en blanco y después rellenarlo.&lt;/p&gt;
+
+&lt;p&gt;Lo siguiente es un dato importante y es el autor de proyecto:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Author [David Díaz &amp;lt;diazdavid.info@gmail.com&amp;gt;, n to skip]: David Diaz &amp;lt;diazdavid.info@gmail.com&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;A continuación nos pregunta cual es la estabilidad mínima que puede tener una dependencia dentro de tu proyecto.
+Esto es importante para que todas las dependencias de nuestro proyecto sean estables o por el contrario permitimos
+dependencias que aún están en desarrollo.
+Yo es este caso prefiero que todas las dependencias de mis proyecto sean estables.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Minimum Stability []: stable 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Las opciones posibles son: dev, alpha, beta, RC y stable.&lt;/p&gt;
+
+&lt;p&gt;La siguiente pregunta es el tipo de proyecto estamos creando. Normalmente yo pongo project:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Package Type (e.g. library, project, metapackage, composer-plugin) []: project
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Lo siguiente es el tipo de licencia y esto ya es un mundo. Normalmente yo lo dejo en blanco para no complicarme mucho.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;License []:
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Ahora viene una parte importante que es indicarle a composer cuales van a ser nuestras dependencias. Normalmente
+yo no las instalo por el asistente a nos ser que ya sepa cuales van a ser mis dependencias.
+Vamos a suponer que queremos Doctrine:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Would you like to define your dependencies (require) interactively [yes]? yes
+
+Search for a package: doctrine/orm 
+
+Enter the version constraint to require (or leave blank to use the latest version):
+
+Using version ^2.5 for doctrine/orm
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Esto descarga la última versión de doctrine. Da la casualidad que yo me sabía el nombre completo de Doctrine pero 
+podíamos haber buscado solo poniendo Doctrine y nos mostraría:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Found 15 packages matching Doctrine
+
+   [0] kdyby/doctrine
+   [1] portphp/doctrine
+   [2] etten/doctrine
+   [3] erdiko/doctrine
+   [4] kappa/doctrine
+   [5] huttopia/doctrine
+   [6] xi/doctrine
+   [7] zucchi/doctrine
+   [8] nnx/doctrine
+   [9] webdevbr/doctrine
+  [10] instante/doctrine
+  [11] lexpress/doctrine1
+  [12] drak/doctrine1
+  [13] doctrine/doctrine1
+  [14] sabaki-dev/doctrine1
+
+Enter package # to add, or the complete package name if it is not listed:
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Pero en el caso de doctrine no esta en paquete que queremos. Más adelante os mostraré una forma más sencilla de
+buscar paquetes.&lt;/p&gt;
+
+&lt;p&gt;Después nos pregunta las dependencias que queremos pero para desarrollo. Casi siempre usamos paquetes para desarrollo
+como puede ser phpUnit y paquetes para producción como puede ser Doctrine. Por este motivo Composer lo
+divide en dos.
+En esta ocasión yo le digo que no y más adelante decidiré:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Would you like to define your dev dependencies (require-dev) interactively [yes]? no
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Ya hemos llegado al final y nos pide confirmación:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;{
+    &quot;name&quot;: &quot;diazdavid-info/test&quot;,
+    &quot;description&quot;: &quot;Proyecto de prueba&quot;,
+    &quot;type&quot;: &quot;project&quot;,
+    &quot;require&quot;: {
+        &quot;doctrine/orm&quot;: &quot;^2.5&quot;
+    },
+    &quot;authors&quot;: [
+        {
+            &quot;name&quot;: &quot;David Diaz&quot;,
+            &quot;email&quot;: &quot;diazdavid.info@gmail.com&quot;
+        }
+    ],
+    &quot;minimum-stability&quot;: &quot;stable&quot;
+}
+
+Do you confirm generation [yes]? yes
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Esto generará un fichero composer.json que veremos más adelante para que sirve.&lt;/p&gt;
+
+&lt;p&gt;Solo nos queda ejecutar:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;composer update
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Este comando descarga todas las dependencias dentro de un directorio que se llama vendor.&lt;/p&gt;
+
+&lt;h2 id=&quot;cómo-añadir-paquetes-a-composer&quot;&gt;¿Cómo añadir paquetes a composer?&lt;/h2&gt;
+&lt;p&gt;Como hemos visto en el punto anterior podemos instalar paquetes con la ayuda del asistente pero ¿que pasa cuando
+necesitamos más paquetes?
+La respuesta es muy fácil, nos vamos a &lt;a href=&quot;https://packagist.org/&quot; target=&quot;_blank&quot;&gt;packagist.org&lt;/a&gt; que es una web muy famosa y 
+que recoge muchos paquetes de composer.
+En ella buscamos lo que queremos y nos quedamos con el nombre del paquete. Ahora nos vamos a la consola y ejecutamos:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;composer require symfony/console
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Esto automáticamente nos añadirá el paquete a nuestras dependencias.&lt;/p&gt;
+
+&lt;p&gt;Si queremos añadir un paquete de desarrollo, por ejemplo phpUnit, ejecutaremos;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;composer require --dev phpunit/phpunit
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Así de fácil añadimos dependencias a nuestros proyectos.&lt;/p&gt;
+
+&lt;h2 id=&quot;para-que-sirve-el-composerjson&quot;&gt;¿Para que sirve el composer.json?&lt;/h2&gt;
+&lt;p&gt;Este fichero contiene toda la configuración de nuestras dependencias, un ejemplo es el siguiente:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;{
+    &quot;name&quot;: &quot;diazdavid-info/test&quot;,
+    &quot;description&quot;: &quot;Proyecto de prueba&quot;,
+    &quot;type&quot;: &quot;project&quot;,
+    &quot;authors&quot;: [
+        {
+            &quot;name&quot;: &quot;David Diaz&quot;,
+            &quot;email&quot;: &quot;diazdavid.info@gmail.com&quot;
+        }
+    ],
+    &quot;minimum-stability&quot;: &quot;stable&quot;,
+    &quot;require&quot;: {
+        &quot;doctrine/orm&quot;: &quot;^2.5&quot;
+    },
+    &quot;require-dev&quot;: {
+        &quot;phpunit/phpunit&quot;: &quot;^6.3&quot;
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Las partes más importantes son:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;require&lt;/strong&gt; que indica las dependencias de producción&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;require-dev&lt;/strong&gt; que indica las dependencias de desarrollo&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Las demás partes son configuraciones propias del proyecto.&lt;/p&gt;
+
+&lt;h2 id=&quot;para-que-sirve-el-composerlock&quot;&gt;¿Para que sirve el composer.lock?&lt;/h2&gt;
+&lt;p&gt;Este fichero lo que almacena es la versión exacta de las dependencias que estamos usando. Esto hace que cuando subimos
+el código a producción o otro compañero se lo descarga, composer descarga la versión que le indique este fichero.
+Hay que tener cuidado porque solo se descarga la versión indicada por este fichero si ejecutamos composer intall
+si por el contrario ejecutamos composer update, composer omitirá este fichero y descarga la última versión 
+de todas nuestras dependencias.&lt;/p&gt;
+
+&lt;h2 id=&quot;cómo-actualizar-composer&quot;&gt;¿Cómo actualizar composer?&lt;/h2&gt;
+&lt;p&gt;En ocasiones necesitamos actualizar composer de versión, para ello ejecutamos:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;composer self update
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Este comando actualizará la versión de composer&lt;/p&gt;
+
+&lt;h2 id=&quot;preguntas-comunes-de-composer&quot;&gt;Preguntas comunes de composer&lt;/h2&gt;
+
+&lt;h3 id=&quot;diferencia-entre-composer-install-y-composer-update&quot;&gt;Diferencia entre composer install y composer update&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Composer install&lt;/strong&gt; descarga todas las dependencias pero, teniendo en cuenta la versión que ha sido almacenado en el fichero
+composer.lock
+&lt;strong&gt;Composer update&lt;/strong&gt; descarga todas las dependencias con la última versión disponible.&lt;/p&gt;
+
+&lt;h3 id=&quot;descargar-repositorios-privados&quot;&gt;Descargar repositorios privados&lt;/h3&gt;
+&lt;p&gt;En alguna ocasión podemos querer descargar alguna dependencia de algún repositorio privado y para ello tenemos que editar
+el fichero composer.json y añadir:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Url del repositorio privado.&lt;/li&gt;
+  &lt;li&gt;Paquete que queremos descargas con su versión&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Un ejemplo de composer.json con repositorio privado es el siguiente:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;{
+    &quot;name&quot;: &quot;diazdavid-info/test&quot;,
+    &quot;description&quot;: &quot;Proyecto de prueba&quot;,
+    &quot;type&quot;: &quot;project&quot;,
+    &quot;authors&quot;: [
+        {
+            &quot;name&quot;: &quot;David Diaz&quot;,
+            &quot;email&quot;: &quot;diazdavid.info@gmail.com&quot;
+        }
+    ],
+    &quot;minimum-stability&quot;: &quot;stable&quot;,
+    &quot;require&quot;: {
+        &quot;repositorio/privado&quot;: &quot;^2.5&quot;
+    },
+    &quot;repositories&quot;: [
+        {
+            &quot;url&quot;: &quot;git@bitbucket.org:repositorio-privado.git&quot;,
+            &quot;type&quot;: &quot;vcs&quot;
+        }
+      ]
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Y con esto ya podemos ejecutar “composer update” y comprobar si todo esta correcto.&lt;/p&gt;</content><author><name>David Díaz</name></author><summary type="html">Si estas buscando una guía de composer... en este artículo te explicamos todo lo que necesitas para empezar a integrarlo en tus proyectos.</summary></entry><entry><title type="html">▷ Guía de flexbox CSS | Aprende todos sus trucos y curiosidades</title><link href="https://free-time-katas.github.io/guia-flexbox.html" rel="alternate" type="text/html" title="▷ Guía de flexbox CSS | Aprende todos sus trucos y curiosidades" /><published>2017-07-29T07:27:47+02:00</published><updated>2017-07-29T07:27:47+02:00</updated><id>https://free-time-katas.github.io/guia-flexbox</id><content type="html" xml:base="https://free-time-katas.github.io/guia-flexbox.html">&lt;p&gt;Hoy os trigo una guia de flexbox, una de las últimas novedades css3. La tecnología avanza muy rápido y como 
+desarrolladores necesitamos adaptarnos a los nuevos tiempo e intentar conocer las últimas tecnologías.&lt;/p&gt;
+
+&lt;p&gt;Auque css no es un lenguaje de programación si que es una pieza muy importante en el desarrollo de una página web. Los 
+desarrolladores front-end cada día necesitan más potencia para explotar toda su creatividad.&lt;/p&gt;
+
+&lt;p&gt;Soy consciente de que flexbox no es agradado de todos los desarrolladores de front pero no deja de ser un recurso con 
+el que puede o no trabajar.&lt;/p&gt;
+
+&lt;p&gt;Después de esta introducción pasemos a ver lo importante de hoy.&lt;/p&gt;
+
+&lt;h2 id=&quot;qué-es-flexbox&quot;&gt;¿Qué es flexbox?&lt;/h2&gt;
+&lt;p&gt;Flexbox o caja flexible es un modelo de caja que viene dentro del estándar css3. Viene a sustituir a los ya conocimos 
+como: block, inline, table, etc. Este modelo de caja ya es bidireccional y no solo de derecha a izquierda o de izquierda 
+a derecha si no de arriba a abajo y viceversa. Estos contenedores flexibles tienen la virtud de que sus hijos también 
+pueden ser flexibles y reorganizarse libremente en función del tamaño disponible.&lt;/p&gt;
+
+&lt;h2 id=&quot;para-que-sirve-flexbox&quot;&gt;¿Para que sirve flexbox?&lt;/h2&gt;
+&lt;p&gt;Flexbox sirve para posicionar los elementos dentro de un contenedor libremente y casi sin restricciones, en 
+función del espacio disponible.&lt;/p&gt;
+
+&lt;h2 id=&quot;cómo-usar-flexbox&quot;&gt;¿Cómo usar flexbox?&lt;/h2&gt;
+&lt;p&gt;Es muy fácil usar flexbox, solo hay que decirle a un contenedor que su display es flex. Con esto lo que haremos es que 
+todos los elementos que hay dentro de ese contenedor sean flexibles.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;display: flex;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;navegadores-compatibles-con-flexbox&quot;&gt;Navegadores compatibles con flexbox&lt;/h2&gt;
+&lt;p&gt;En julio de 2017 esta es la tabla de compatibilidades con los navegadores.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/navegadores-compatibles-flexbox.png&quot; alt=&quot;Navegadores compatibles flexbox&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;ejemplos-con-flexbox&quot;&gt;Ejemplos con flexbox&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Ejemplo básico de flexbox&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Este ejemplo muestra como se comportan los hijos de una caja flexible&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;style&amp;gt;&lt;/span&gt; 
+        &lt;span class=&quot;nc&quot;&gt;.flex-container&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;nl&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;-webkit-flex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;nl&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;flex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;nl&quot;&gt;background-color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;lightgrey&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;nc&quot;&gt;.flex-item&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;nl&quot;&gt;background-color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;cornflowerblue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;nl&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;100px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;nl&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;100px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;nl&quot;&gt;margin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;10px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/style&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
+
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;flex-container&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;flex-item&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;flex item 1&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;flex-item&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;flex item 2&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;flex-item&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;flex item 3&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;  
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/ejemplo-basico-flexbox.png&quot; alt=&quot;Ejemplo básico flexbox&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Ejemplo dinámico y responsive&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Este ejemplo de nuestros amigo de &lt;a href=&quot;https://developer.mozilla.org/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Usando_las_cajas_flexibles_CSS&quot; target=&quot;_blank&quot;&gt;developer mozilla&lt;/a&gt; 
+se muestra como las cajas se adaptan no solo en su ancho si no en su orden para ocupar toda la pantalla.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/ejemplo-responsive-flexbox.jpg&quot; alt=&quot;Ejemplo responsive flexbox&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;lang=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;en&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;style&amp;gt;&lt;/span&gt;
+
+        &lt;span class=&quot;nt&quot;&gt;body&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;nl&quot;&gt;font&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;24px&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Helvetica&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;nl&quot;&gt;background&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#999999&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+        &lt;span class=&quot;nf&quot;&gt;#main&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;nl&quot;&gt;min-height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;800px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;nl&quot;&gt;margin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;nl&quot;&gt;padding&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;nl&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;-webkit-flex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;nl&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;flex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;nl&quot;&gt;-webkit-flex-flow&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;nl&quot;&gt;flex-flow&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+        &lt;span class=&quot;nf&quot;&gt;#main&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;article&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;nl&quot;&gt;margin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;4px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;nl&quot;&gt;padding&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;5px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;nl&quot;&gt;border&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1px&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;solid&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#cccc33&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;nl&quot;&gt;border-radius&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;7pt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;nl&quot;&gt;background&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#dddd88&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;nl&quot;&gt;-webkit-flex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;60%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;nl&quot;&gt;flex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;60%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;nl&quot;&gt;-webkit-order&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;nl&quot;&gt;order&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+        &lt;span class=&quot;nf&quot;&gt;#main&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;nav&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;nl&quot;&gt;margin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;4px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;nl&quot;&gt;padding&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;5px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;nl&quot;&gt;border&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1px&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;solid&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#8888bb&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;nl&quot;&gt;border-radius&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;7pt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;nl&quot;&gt;background&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#ccccff&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;nl&quot;&gt;-webkit-flex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;6&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;20%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;nl&quot;&gt;flex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;6&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;20%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;nl&quot;&gt;-webkit-order&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;nl&quot;&gt;order&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+        &lt;span class=&quot;nf&quot;&gt;#main&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;aside&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;nl&quot;&gt;margin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;4px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;nl&quot;&gt;padding&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;5px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;nl&quot;&gt;border&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1px&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;solid&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#8888bb&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;nl&quot;&gt;border-radius&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;7pt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;nl&quot;&gt;background&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#ccccff&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;nl&quot;&gt;-webkit-flex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;6&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;20%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;nl&quot;&gt;flex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;6&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;20%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;nl&quot;&gt;-webkit-order&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;nl&quot;&gt;order&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+        &lt;span class=&quot;nt&quot;&gt;header&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;footer&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;nl&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;block&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;nl&quot;&gt;margin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;4px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;nl&quot;&gt;padding&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;5px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;nl&quot;&gt;min-height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;100px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;nl&quot;&gt;border&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1px&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;solid&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#eebb55&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;nl&quot;&gt;border-radius&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;7pt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;nl&quot;&gt;background&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#ffeebb&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+        &lt;span class=&quot;c&quot;&gt;/* Too narrow to support three columns */&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;@media&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;all&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;max-width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;640px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+
+            &lt;span class=&quot;nf&quot;&gt;#main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;#page&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;nl&quot;&gt;-webkit-flex-flow&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;column&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+                &lt;span class=&quot;nl&quot;&gt;flex-flow&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;column&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+            &lt;span class=&quot;nf&quot;&gt;#main&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;article&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;#main&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;nav&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;#main&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;aside&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;c&quot;&gt;/* Return them to document order */&lt;/span&gt;
+                &lt;span class=&quot;nl&quot;&gt;-webkit-order&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+                &lt;span class=&quot;nl&quot;&gt;order&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+            &lt;span class=&quot;nf&quot;&gt;#main&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;nav&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;#main&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;aside&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;header&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;footer&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;nl&quot;&gt;min-height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;50px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+                &lt;span class=&quot;nl&quot;&gt;max-height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;50px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/style&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;header&amp;gt;&lt;/span&gt;header&lt;span class=&quot;nt&quot;&gt;&amp;lt;/header&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'main'&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;article&amp;gt;&lt;/span&gt;article&lt;span class=&quot;nt&quot;&gt;&amp;lt;/article&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;nav&amp;gt;&lt;/span&gt;nav&lt;span class=&quot;nt&quot;&gt;&amp;lt;/nav&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;aside&amp;gt;&lt;/span&gt;aside&lt;span class=&quot;nt&quot;&gt;&amp;lt;/aside&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;footer&amp;gt;&lt;/span&gt;footer&lt;span class=&quot;nt&quot;&gt;&amp;lt;/footer&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Ejemplo de una home entera&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Si aun quieres ver más ejemplos te dejo uno de &lt;a href=&quot;https://github.com/free-time-katas/kata-flex-sass&quot; target=&quot;_blank&quot;&gt;flexbox con sass&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/ejemplo-flexbox-sass.png&quot; alt=&quot;Ejemplo flexbox con sass&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;términos-de-flexbox&quot;&gt;Términos de flexbox&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/esquema-flexbox.jpg&quot; alt=&quot;Esquema flexbox&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;flex-container&quot;&gt;Flex container&lt;/h3&gt;
+&lt;p&gt;Es el elemento padre de los elementos flexibles. Se difine así porque tiene la propiedad display flex en sus atributos de estilo.&lt;/p&gt;
+
+&lt;h3 id=&quot;flex-item&quot;&gt;Flex item&lt;/h3&gt;
+&lt;p&gt;Solo los elementos que estan dentro de un &lt;strong&gt;flex container&lt;/strong&gt;. Si fuese el elemeto flexible fuese texto, automáticamente se
+envuenlve en un elemento flexible anónimo.&lt;/p&gt;
+
+&lt;h3 id=&quot;ejes&quot;&gt;Ejes&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;Flex-direction&lt;/strong&gt; es la propiedad que define el eje principal.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Justify-content&lt;/strong&gt; es la propiedad que define como se colocan los elemento a lo largo del eje principal.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Align-items&lt;/strong&gt; es la propiedad que define como se colocan los elemento a lo largo del eje secundario.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Align-self&lt;/strong&gt; es la propiedad que define como se colocan los elementos con respecto al eje secundario.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;direcciones&quot;&gt;Direcciones&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;Order&lt;/strong&gt; es la propiedad que elementos deben salir primero.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Flex-flow&lt;/strong&gt; esta propiedad combina &lt;strong&gt;flex-direction&lt;/strong&gt; y &lt;strong&gt;flex-wrap&lt;/strong&gt; y lo que hace es colocar los elementos flexibles.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;líneas&quot;&gt;Líneas&lt;/h3&gt;
+&lt;p&gt;Los elementos flexibles se pueden colocar en una sola línea o en varias líneas pero, hay que incluir la propiedad &lt;strong&gt;flex-wrap&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;dimensiones&quot;&gt;Dimensiones&lt;/h3&gt;
+&lt;p&gt;Los atributos de &lt;strong&gt;“altura”&lt;/strong&gt; y &lt;strong&gt;“anchura”&lt;/strong&gt; para usarlos en los elementos flexibles son &lt;strong&gt;(main size)&lt;/strong&gt; para el tamaño principal
+y &lt;strong&gt;(cross size)&lt;/strong&gt; para el tamaño secundario, que siempre siguen el eje principal y el eje secundario del contenedor flexible.&lt;/p&gt;</content><author><name>David Díaz</name></author><summary type="html">Usar flexbox te asegura que los elementos siempre estarán como tu quieres en todas las situaciones, por eso te traigo esta guia en español.</summary></entry></feed>
