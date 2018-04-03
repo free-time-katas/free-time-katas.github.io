@@ -1,15 +1,22 @@
 ---
-layout: post
-title:  "Guía de composer en español"
+layout: page
+title: "▷ Guía de composer en español | Si eres programador PHP lee esto"
+description: "Si estas buscando una guía de composer... ➤ ➤ en este artículo te explicamos todo lo que necesitas para empezar a integrarlo en tus proyectos."
+principal-title: "Guía de composer en español"
+principal-image: "/img/guia-composer.jpeg,Guía de Composer"
+images-list:
+    - /img/guia-composer.jpeg
 date:   2017-08-12 07:27:47 +0200
 categories: 
     - composer
     - backend
 permalink: /guia-composer.html
 excerpt: "Si estas buscando una guía de composer... en este artículo te explicamos todo lo que necesitas para empezar a integrarlo en tus proyectos."
-img: guia-composer.jpeg
 author: "David Díaz"
-post_in_home: true
+enable-related: false
+enable-principal-title: true
+enable-principal-image: true
+enable-index: true
 ---
 En el año 2017 no concibo ningún proyecto sin un **gestor de dependencias**, da igual la tecnología que uses. Para Java
 tenemos Maven, para android Gradle, para js NPM, para php Composer, etc.
@@ -23,17 +30,6 @@ tener nuestros proyectos. Nos olvidamos de que cada miembro del equipo trabaje c
 paquete.
 
 Dicho todo esto vamos a ver lo fácil que es trabajar con composer en php.
-
-> 1. [¿Qué es composer?](#qué-es-composer)
-> 1. [¿Cómo instalar composer?](#cómo-instalar-composer)
-> 1. [¿Cómo usar composer?](#cómo-usar-composer)
-> 1. [¿Cómo añadir paquetes a composer?](#cómo-añadir-paquetes-a-composer)
-> 1. [¿Para que sirve el composer.json?](#para-que-sirve-el-composerjson)
-> 1. [¿Para que sirve el composer.lock?](#para-que-sirve-el-composerlock)
-> 1. [¿Cómo actualizar composer?](#cómo-actualizar-composer)
-> 1. [Preguntas comunes de composer](#preguntas-comunes-de-composer)
->       1. [Diferencia entre composer install y composer update](#diferencia-entre-composer-install-y-composer-update)
->       1. [Descargar repositorios privados](#descargar-repositorios-privados)
 
 ## ¿Qué es composer?
 Como he dicho antes composer es un gestor de dependencias para php. Con el podemos descargar desde librerías
