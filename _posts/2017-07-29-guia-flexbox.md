@@ -1,15 +1,27 @@
 ---
-layout: post
-title:  "Guía de flexbox css en español"
+layout: page
+title: "▷ Guía de flexbox CSS | Aprende todos sus trucos y curiosidades"
+description: "➤ ➤ Usar flexbox te asegura que los elementos siempre estarán como tu quieres en todas las situaciones, por eso te traigo esta guia en español."
+principal-title: "Guía de flexbox css en español"
+principal-image: "/img/guia-flexbox.jpg,Guía flexbox css"
+images-list:
+    - /img/navegadores-compatibles-flexbox.png
+    - /img/ejemplo-basico-flexbox.png
+    - /img/ejemplo-responsive-flexbox.jpg
+    - /img/ejemplo-flexbox-sass.png
+    - /img/esquema-flexbox.jpg
 date:   2017-07-29 07:27:47 +0200
 categories: 
     - flexbox
     - frontend
+    - css
 permalink: /guia-flexbox.html
 excerpt: "Usar flexbox te asegura que los elementos siempre estarán como tu quieres en todas las situaciones, por eso te traigo esta guia en español."
-img: guia-flexbox.jpg
 author: "David Díaz"
-post_in_home: true
+enable-related: false
+enable-principal-title: true
+enable-principal-image: true
+enable-index: true
 ---
 Hoy os trigo una guia de flexbox, una de las últimas novedades css3. La tecnología avanza muy rápido y como 
 desarrolladores necesitamos adaptarnos a los nuevos tiempo e intentar conocer las últimas tecnologías.
@@ -21,19 +33,6 @@ Soy consciente de que flexbox no es agradado de todos los desarrolladores de fro
 el que puede o no trabajar.
 
 Después de esta introducción pasemos a ver lo importante de hoy.
-
-> 1. [¿Qué es flexbox?](#qué-es-flexbox)
-> 1. [¿Para que sirve flexbox?](#para-que-sirve-flexbox)
-> 1. [¿Cómo usar flexbox?](#cómo-usar-flexbox)
-> 1. [Navegadores compatibles con flexbox](#navegadores-compatibles-con-flexbox)
-> 1. [Ejemplos con flexbox](#ejemplos-con-flexbox)
-> 1. [Términos de flexbox](#términos-de-flexbox)
->     1. [Flex container](#flex-container)
->     1. [Flex item](#flex-item)
->     1. [Ejes](#ejes)
->     1. [Direcciones](#direcciones)
->     1. [Líneas](#líneas)
->     1. [Dimensiones](#dimensiones)
 
 ## ¿Qué es flexbox?
 Flexbox o caja flexible es un modelo de caja que viene dentro del estándar css3. Viene a sustituir a los ya conocimos 
