@@ -13,20 +13,67 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Free Time Katas
-email: diazdavid.info@gmail.com
-description: > # this means to ignore newlines until "baseurl:"
+# title: Your awesome title
+# email: your-email@example.com
+name: Free Time Katas
+short-description: Amantes del desarrolo web
+description: >- # this means to ignore newlines until "baseurl:"
   Me estanca programar y descubrir tecnologías nuevas o que aun no hayan pasado por mis manos.
   En este blog subiré guías de todo aquello que me apasione y me haga disfrutar ya sea de
   back-end o front-end.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://free-time-katas.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: diazdavid_info
-github_username:  diazdavid-info
+#twitter_username: jekyllrb
+#github_username:  jekyll
+menu-top:
+  - text: Artículos
+    url: '#'
+    sub-menu:
+      - text: Guia Flexbox
+        url: /guia-flexbox.html
+      - text: Guia Composer
+        url: /guia-composer.html
+      - text: Bootstrap 4
+        url: /bootstrap-4-beta.html
+      - text: Rich Snippet
+        url: /rich-snippet/
+      - text: Guia Git
+        url: /git/
+      - text: Rich Snippet Wordpress
+        url: /rich-snippet/para-wordpress.html
+
+menu-bottom:
+  - text: Políticas de Privacidad
+    url: #
+  - text: Política de Cookies
+    url: #
+  - text: Contacto
+    url: #
+
+header:
+  - text: Free Time Katas
+  - background: '#BF2A2A'
+  - color: '#E6E7E8'
+
+cookie:
+  - dismiss: OK!
+    message: Usamos Cookies
+    text-link: Leer más
+    href-link: '#'
+
+#  - menu 2:
+#    - name: name
+#    - url: name
 
 # Build settings
 markdown: kramdown
-theme: minima
+theme: go-theme
+
+plugins:
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
 gems:
   - jekyll-feed
   - jekyll-sitemap
