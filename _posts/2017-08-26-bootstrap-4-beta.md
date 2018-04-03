@@ -3,7 +3,7 @@ layout: page
 title: "▷ Bootstrap 4 beta, os contamos sus novedades"
 description: "Descubre todas las novedades de la beta de ➤ ➤ Bootstrap 4. Si estas pensando añadir un framework css a tus proyectos ENTRA y echa un vistazo a las novedades que trae Bootstrap."
 principal-title: "Bootstrap 4 beta, os contamos sus novedades"
-principal-image: "/img/novedades-bootstrap-4-beta.jpg"
+principal-image: "/img/novedades-bootstrap-4-beta.jpg,novedades bootstrap 4"
 images-list:
     - /img/grid-1-bootstrap-4.jpg
     - /img/grid-2-bootstrap-4.jpg
@@ -25,7 +25,7 @@ excerpt: "Si, has leído bien, después de dos años ya esta aquí la versión b
 author: "David Díaz"
 enable-related: false
 enable-principal-title: true
-enable-principal-image: false
+enable-principal-image: true
 enable-index: true
 ---
 *El equipo de Bootstrap lleva dos años trabajando en su nueva versión* y por fin ya tenemos su
