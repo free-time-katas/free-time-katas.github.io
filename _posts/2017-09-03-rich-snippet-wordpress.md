@@ -1,15 +1,25 @@
 ---
-layout: post
-title: "Como añadir los Rich Snippet en wordpress - Todo en un plugin -"
+layout: page
+title: "▷ Como añadir los Rich Snippet en wordpress | Posiciona mejor en Google"
+description: "➤ ➤Implementar los rich snippets en Wordpress es muy muy fácil y sin ningún conocimiento puedes añadirlos. Aquí te lo cuento todo."
+principal-title: "Como añadir los Rich Snippet en wordpress - Todo en un plugin -"
+principal-image: "/img/rich-snippet-para-wordpress.jpg,Rich Snippet para Wordpress"
+images-list:
+    - /img/rich-snippet-para-wordpress.jpg
+    - /img/instalar-all-in-one-schema-rich-snippets.jpg
+    - /img/implementar-rich-snippet-en-wordpres-1.jpg
+    - /img/implementar-rich-snippet-en-wordpres-2.jpg
 date: 2017-09-03 07:27:47 +0200
 categories: 
     - rich snippet
     - frontend
 permalink: /rich-snippet/para-wordpress.html
 excerpt: "Implementar los rich snippets en Wordpress es muy muy fácil y sin ningún conocimiento puedes añadirlos. Aquí te lo cuento todo."
-img: rich-snippet-para-wordpress.jpg
 author: "David Díaz"
-post_in_home: false
+enable-related: false
+enable-principal-title: true
+enable-principal-image: true
+enable-index: true
 ---
 Implementar los Rich Snippet en Wordpress es tan sencillo como instalar un plugin y rellenar las opciones que nos pide.
 De esta forma podemos destacar un poquito más en Google y que nuestros artículos o post estén entre las primeras
