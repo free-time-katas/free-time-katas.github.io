@@ -1,15 +1,29 @@
 ---
-layout: post
-title: "Los Rich Snippet. Marca la diferencia en Google."
+layout: page
+title: "▷ ¿Qué son los Rich Snippet? Te contamos todo los que necesitas saber"
+description: "➤ ➤¿Como implementar los Rich Snippets en nuestra web? ¿Qué tipos hay? ¿Lo puedo poner en wordpress? Estas preguntas y muchas más las tienes aquí."
+principal-title: "Los Rich Snippet. Marca la diferencia en Google."
+principal-image: "/img/rich-snippet.jpg,Rich Snippet"
+images-list:
+    - /img/rich-snippet.jpg
+    - /img/ejemplo-con-rich-snippet.jpg
+    - /img/ejemplo-sin-rich-snippet.jpg
+    - /img/hallanalysis-generador-rich-snippet.jpg
+    - /img/ranksider-generador-rich-snippet.jpg
+    - /img/microdatagenerator-generador-rich-snippet.jpg
+    - /img/google-validador-rich-snippet.jpg
+    - /img/yandex-validador-rich-snippet.jpg
 date: 2017-09-03 07:27:46 +0200
 categories: 
     - rich snippet
     - frontend
 permalink: /rich-snippet/
 excerpt: "¿Como implementarlo en nuestra web? ¿Qué tipos hay? ¿Lo puedo poner en wordpress? Estas preguntas y muchas más las tienes aquí."
-img: rich-snippet.jpg
 author: "David Díaz"
-post_in_home: true
+enable-related: false
+enable-principal-title: true
+enable-principal-image: true
+enable-index: true
 ---
 Cada día buscamos más que nuestros resultados en las SERP sea los más destacados y aumente el CRT. Ahora tenemos la 
 posibilidad de añadir **los Rich Snippet (Fragmentos Enriquecidos)** para que nuestros resultados en Google sea más visibles.
@@ -21,17 +35,11 @@ Dicho esto, en este artículo explicaremos como podemos implementarlos en nuestr
 
 Aquí tenéis el índice:
 
-> 1. [Tipos de Rich Snippets](#tipos-de-rich-snippets)
-> 1. [¿Qué son los Rich Snippets o Fragmentos Enriquecidos?](#qué-son-los-rich-snippets-o-fragmentos-enriquecidos)
->       1. [Ejemplo de resultado con Rich Snippet](#ejemplo-de-resultado-con-rich-snippet)
->       1. [Ejemplo de resultado sin Rich Snippet](#ejemplo-de-resultado-sin-rich-snippet)
-> 1. [¿Comó crear los Rich Snippets?](#comó-crear-los-rich-snippets)
-> 1. [¿Donde colocar los Rich Snippets?](#donde-colocar-los-rich-snippets)
-> 1. [¿Como validar los Rich Snippets?](#como-validar-los-rich-snippets)
-
 ## Tipos de Rich Snippets
 
-{% include rich-snippet.html %}
+{% assign my_array = "/rich-snippet/para-wordpress.html" | split: "|" %}
+{% assign list = site.posts | where:"permalink","/rich-snippet/para-wordpress.html" %}
+{%- include features.html post-list=list -%}
 
 ## ¿Qué son los Rich Snippets o Fragmentos Enriquecidos?
 Son fragmentos de código que añadimos en nuestras webs y facilita tanto la lectura como la compresión a las arañas de los
